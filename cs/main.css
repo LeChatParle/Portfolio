@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/* This document should only be used to override Bootstrap styles */
+
+#portfolio, #contactMe, #myCV {
+	border-radius: 0px;
+}
