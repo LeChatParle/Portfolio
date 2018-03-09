@@ -5,7 +5,11 @@ html {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 
-#top, #portfolio, #contactMe, #myCV {
+h2 {
+	font-weight: 900;
+}
+
+#top, #portfolio, #contactMe, #myCV .removeBorderRadius {
 	border-radius: 0px;
 }
 
@@ -35,3 +39,52 @@ nav {
 .sectionBacks {
 	background-color: #268D03;
 }
+
+.overlayDIV {
+	position: absolute;
+  text-align: center;
+	overflow: hidden;
+	color: #FFFFFF !important;
+	height: 100%;
+  width: 100%;
+	top: 25%;
+	pointer-events: none; /*This prevents the text from interrupting the hover event on the image below*/
+}
+
+.actualImage:hover {
+	filter: brightness(20%) !important;
+	filter: grayscale(100%);
+	transition: all 0.2s ease-in-out 0s;
+}
+
+ /*
+.websiteDescription:hover {
+	filter: grayscale(100%);
+	filter: brightness(30%); 
+	transition: all 0.4s ease-in-out 0s;
+}
+
+.overlayDIV {
+	position: absolute;
+  text-align: center;
+	overflow: hidden;
+	color: white !important;
+	height: 100%;
+  width: 100%;
+	top: 25%;
+	opacity: 0 !important;
+	transition: all 0.4s ease-in-out 0s;
+}
+
+.overlayDIV:hover {
+	opacity: 1 !important;
+	color: #FF0000 !important;
+	top: 25%;
+	filter: brightness(100%);
+	filter: grayscale(0%);
+}
+
+.overlayTitle .overlayBody {
+	
+}
+*/
