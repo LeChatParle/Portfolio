@@ -24,6 +24,7 @@
   	</head>
 	<body>
 		
+		<!--Navbar does not collapse on smaller screens. That should be the next step, i.e. use a hamburger menu -->
 		<nav class="navbar navbar-expand navbar-dark fixed-top bg-dark overflow-hidden position-absolute">
   			<div>
     			<ul class="navbar-nav">
@@ -35,6 +36,7 @@
   			</div>
 		</nav>
 
+		<!-- Column tags on the jumbotron divs causes image overflow issues. Removed margins on top and bottom to ensure panels touch. Removed border radius to have straight edges-->
 		<div class="jumbotron bg-white mt-5 mb-0">
   		<div id="#top">
   				<div class="text-dark text-center">
@@ -45,7 +47,6 @@
 			</div>
 		</div>
 
-		<!-- Column tags on the jumbotron divs causes image overflow issues. Removed margins on top and bottom to ensure panels touch. Removed border radius to have straight edges-->
 		<h2 class="text-center bg-dark mt-0 mb-0 p-3 text-light">Portfolio</h2>
  		<div class="jumbotron bg-primary mb-0" id="portfolio">
    		<div class="col">
@@ -53,15 +54,14 @@
 				</a>
      	</div>
      	
-			<!-- Keep the column tag here. -->
+			<!-- Keep the column tag here; it handles proper layout & img-fluid mantains size. Keep this code & comment to remember how to add additional projects. -->
 			<!--
  			<div class="col">
     		<a href="#top"><img src="" class="img-fluid" alt="A picture of the website you are on"></a>
    		</div>
 			-->
  		</div>
-		
-		<!--Next steps: glow green on hover-->
+	
 		<h2 class="text-center bg-dark mt-0 mb-0 p-3 text-light">Contact</h2>
 		<div class="jumbotron mb-0" id="contactMe">	
   		<div class="text-center">
