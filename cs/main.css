@@ -1,16 +1,16 @@
 @charset "UTF-8";
 /* This document should only be used to override Bootstrap styles */
 
+html {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
 #top, #portfolio, #contactMe, #myCV {
 	border-radius: 0px;
 }
 
 .colorizeText:hover {
-	color: red !important;
-}
-
-.glowEvent:hover {
-	box-shadow: 0 0 30px yellow;
+	color: #FF0000 !important;
 }
 
 #selfie {
@@ -20,4 +20,14 @@
 
 .icons {
 	width: 10%;
+}
+
+#logo {
+	color: #FFFFFF;
+	font-weight: 900;
+	font-size: 32px;
+}
+
+nav {
+	line-height: 50px;
 }
