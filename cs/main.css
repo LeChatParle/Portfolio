@@ -4,3 +4,20 @@
 #portfolio, #contactMe, #myCV {
 	border-radius: 0px;
 }
+
+.colorizeText:hover {
+	color: red !important;
+}
+
+.glowEvent:hover {
+	box-shadow: 0 0 30px yellow;
+}
+
+#selfie {
+	width: 25%; 
+	border-radius: 100%;
+}
+
+.icons {
+	width: 10%;
+}
