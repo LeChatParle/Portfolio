@@ -1,6 +1,10 @@
 // JavaScript Document
 
 $(document).ready(function() {
+	$('#fullpage').fullpage({
+		navigationPosition: 'right'
+	});
+	
 	$(".overlayDIV").hide();
 	$(".websitePicture").hover(
 		function() {

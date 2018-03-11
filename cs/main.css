@@ -6,7 +6,7 @@ html {
 }
 
 body {
-	background-color: #D50028;
+	background-color: #E1E1E1;
 }
 
 .justifiedText {
@@ -23,7 +23,7 @@ body {
 }
 
 .contactIcons {
-	width: 20%;
+	width: 10%;
 }
 
 #logo {
@@ -37,7 +37,7 @@ nav {
 }
 
 .sectionBacks {
-	background-color: #000000; /*Old color 268D03*/
+	background-color: #191919; /*Old color 268D03*/
 }
 
 .overlayDIV {
@@ -47,8 +47,11 @@ nav {
 	color: #FFFFFF;
 	height: 100%;
   width: 100%;
-	top: 25%;
+	top: 35%;
 	pointer-events: none; /*This prevents the text from interrupting the hover event on the image below*/
+}
+.actualImage {
+	width: 50%;
 }
 
 .actualImage:hover {
