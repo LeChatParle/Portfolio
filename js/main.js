@@ -2,7 +2,14 @@
 
 $(document).ready(function() {
 	$('#fullpage').fullpage({
-		navigationPosition: 'right'
+		scrollHorizontally: true,
+		dragAndMove: true,
+		navigationPosition: 'right',
+		touchSensitivity: 1,
+		scrollingSpeed: 1000,
+		loopBottom: true,
+		loopTop: false,
+		parallax: true,
 	});
 	
 	$(".overlayDIV").hide();

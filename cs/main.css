@@ -13,17 +13,20 @@ body {
 	text-align: justify;
 }
 
-#top, #portfolio, #contactMe, #myCV .removeBorderRadius {
-	border-radius: 0px;
-}
-
-#selfie {
-	width: 40%; 
-	border: 0.5vw solid black;
-}
-
 .contactIcons {
 	width: 10%;
+}
+
+#top {
+	position: absolute;
+	bottom: 1px;
+}
+
+#name, #intro {
+	color: red;
+	mix-blend-mode: difference;
+	font-size: 10vw;
+	transform: skew(-15deg);
 }
 
 #logo {
@@ -37,7 +40,11 @@ nav {
 }
 
 .sectionBacks {
-	background-color: #191919; /*Old color 268D03*/
+	background-color: #191919;
+}
+
+#photography {
+	background-color: #000000;
 }
 
 .overlayDIV {
@@ -51,12 +58,16 @@ nav {
 	pointer-events: none; /*This prevents the text from interrupting the hover event on the image below*/
 }
 .actualImage {
-	width: 50%;
+	width: 70%;
 }
 
 .actualImage:hover {
 	filter: brightness(20%);
 	transition: all 0.2s ease-in-out 0s;
+}
+
+.myPhotos {
+	width: 80%;
 }
 
 .bgColorNav {
@@ -65,4 +76,13 @@ nav {
 
 .nav-item > a.nav-link.colorizeText:hover, #logo:hover {
 	color: #FF0000;
+}
+
+#triangle {
+	width: 0;
+	height: 0;
+	border-bottom: 750px solid red;
+	border-right: 750px solid transparent;
+	bottom: 0;
+	position: fixed;
 }
