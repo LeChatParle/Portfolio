@@ -5,25 +5,25 @@ html {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 
-h2 {
-	font-weight: 900;
+body {
+	background-color: #D50028;
+}
+
+.justifiedText {
+	text-align: justify;
 }
 
 #top, #portfolio, #contactMe, #myCV .removeBorderRadius {
 	border-radius: 0px;
 }
 
-.colorizeText:hover {
-	color: #FF0000 !important;
-}
-
 #selfie {
-	width: 25%; 
-	border-radius: 100%;
+	width: 40%; 
+	border: 0.5vw solid black;
 }
 
-.icons {
-	width: 10%;
+.contactIcons {
+	width: 20%;
 }
 
 #logo {
@@ -37,14 +37,14 @@ nav {
 }
 
 .sectionBacks {
-	background-color: #268D03;
+	background-color: #000000; /*Old color 268D03*/
 }
 
 .overlayDIV {
 	position: absolute;
   text-align: center;
 	overflow: hidden;
-	color: #FFFFFF !important;
+	color: #FFFFFF;
 	height: 100%;
   width: 100%;
 	top: 25%;
@@ -52,39 +52,14 @@ nav {
 }
 
 .actualImage:hover {
-	filter: brightness(20%) !important;
-	filter: grayscale(100%);
+	filter: brightness(20%);
 	transition: all 0.2s ease-in-out 0s;
 }
 
- /*
-.websiteDescription:hover {
-	filter: grayscale(100%);
-	filter: brightness(30%); 
-	transition: all 0.4s ease-in-out 0s;
+.bgColorNav {
+	background-color: #000000;
 }
 
-.overlayDIV {
-	position: absolute;
-  text-align: center;
-	overflow: hidden;
-	color: white !important;
-	height: 100%;
-  width: 100%;
-	top: 25%;
-	opacity: 0 !important;
-	transition: all 0.4s ease-in-out 0s;
+.nav-item > a.nav-link.colorizeText:hover, #logo:hover {
+	color: #FF0000;
 }
-
-.overlayDIV:hover {
-	opacity: 1 !important;
-	color: #FF0000 !important;
-	top: 25%;
-	filter: brightness(100%);
-	filter: grayscale(0%);
-}
-
-.overlayTitle .overlayBody {
-	
-}
-*/

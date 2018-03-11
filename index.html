@@ -30,36 +30,42 @@
 	<body>
 		
 		<!--Navbar does not collapse on smaller screens. That should be the next step, i.e. use a hamburger menu -->
-		<nav class="navbar navbar-expand navbar-dark fixed-top bg-dark overflow-hidden position-absolute m-0">
+		<nav class="navbar navbar-expand navbar-dark fixed-top bgColorNav overflow-hidden position-fixed m-0">
   			<div>
     			<ul class="navbar-nav">
 						<li class="nav-item"><a href="#top" class="nav-link colorizeText" id="logo">EBJ</a></li>
      	 			<li class="nav-item"><a href="#portfolio" class="nav-link colorizeText">Portfolio</a></li>
-      			<li class="nav-item"><a href="#contactMe" class="nav-link colorizeText">Contact</a></li>
-						<li class="nav-item"><a href="#myCV" class="nav-link colorizeText">My CV</a></li>
+      			<li class="nav-item"><a href="#contactMe" class="nav-link colorizeText">Contact Info</a></li>
     			</ul>
   			</div>
 		</nav>
-
-		<!-- Column tags on the jumbotron divs causes image overflow issues. Removed margins on top and bottom to ensure panels touch. Removed border radius to have straight edges-->
-		<div class="jumbotron bg-light m-0 removeBorderRadius">
-  		<div id="#top">
-  				<div class="text-dark text-center pt-5">
-   					<img src="./im/Moi.jpg" class="img-fluid" id="selfie" alt="A picture of Jeremy Edwards in a red shirt and blue bowtie">
-    
-    				<h2 class="text-center mt-5">Jeremy Edwards</h2> 
-  				</div>
+		
+		<!-- Column tags on the jumbotron divs causes image overflow issues unless you get rid of margins; Removed margins on top and bottom to ensure panels touch. Removed border radius to have straight edges-->
+		<div class="jumbotron m-0 p-5 removeBorderRadius">
+  		<div class="row" id="#top">
+  			<div class="text-dark p-0 pt-5 m-0 col-sm-4 text-center">
+   				<img src="./im/Moi.jpg" class="img-fluid" id="selfie" alt="A picture of Jeremy Edwards in a red shirt and blue bowtie">
+  			</div>
+				<div class="text-dark p-0 m-0 col-sm-8">
+					<h2 class="mt-5 m-0 pb-2" id="name">Jeremy Edwards</h2>
+					<p class="justifiedText pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis sodales purus. Integer magna mauris, efficitur non euismod in, vulputate non dui. Integer sed elementum dolor. Morbi non interdum lorem. Quisque volutpat nibh in arcu molestie, et tempor risus luctus. Suspendisse cursus urna eget nulla ultricies, vitae consectetur nunc porttitor. Donec fermentum arcu odio, non semper neque interdum et. Etiam malesuada in nisl ut auctor. Mauris a porta est, eu varius justo. Nam auctor, tellus vitae placerat bibendum, nisl eros tristique lorem, et fringilla felis est ac felis. Fusce ac sagittis ante, ut dictum augue. Sed aliquet blandit eros, sit amet fermentum nibh mattis in.</p>
+				</div>
 			</div>
 		</div>
 
 		<!--In order to have the picture dim and the text overlay, include class="col websitePicture p-0 m-0" on the div of the image, include class="img-fluid p-0 m-0 actualImage" on the img, include overlayDIV on the div containing the text, and include overlayTitle and overlayBody on the h3 and p, respectively. All the specifics are handled with CSS and JavaScript.-->
-		<h2 class="text-center bg-dark mt-0 mb-0 p-1 text-light">Portfolio</h2>
+		
+		<!--
+		<h2 class="text-center bg-dark m-0 p-1 text-light">Portfolio</h2>
+		-->
  		<div class="jumbotron mb-0 sectionBacks" id="portfolio">
    		<div class="col websitePicture p-0 m-0">
    			<a href="http://www.mandle-edwards.com" target="blank"><img src="https://i.imgur.com/2fKrNAi.png" class="img-fluid p-0 m-0 actualImage" alt="A picture of the website for Mandle Edwards Surveying">
-					<div class="overlayDIV"><h3 class="overlayTitle">Mandle-Edwards Surveying</h3><p class="overlayBody">I designed this website in 2012 to upgrade their site from a premade, link saturated mess.</p></div>
+					<div class="overlayDIV"><h3 class="overlayTitle">Mandle-Edwards Surveying</h3><p class="overlayBody">I designed this website in 2012 to upgrade their site from a premade, link-saturated mess.</p></div>
 				</a>
      	</div>
+			
+			<!--To do: add photography gallary. Calm colors. Simplifiy contact and download to one bar.-->
      			
 			<!-- Keep the column tag here; it handles proper layout & img-fluid mantains size. Keep this code & comment to remember how to add additional projects. -->
 			<!--
@@ -73,17 +79,20 @@
 			-->
  		</div>
 	
+		<!--
 		<h2 class="text-center bg-dark mt-0 mb-0 p-1 text-light">Contact</h2>
-		<div class="jumbotron mb-0" id="contactMe">	
-  		<div class="text-center">
-  			<a href="https://www.linkedin.com/in/jeremybedwards/" target="blank" class="p-0 pb-5 img-fluid"><img src="./im/LinkedIn.png" class="icons" alt="LinkedIn's Logo" ></a>
+		-->
+		<div class="jumbotron m-0 row" id="contactMe">	
+  		<div class="text-center col">
+  			<a href="https://www.linkedin.com/in/jeremybedwards/" target="blank" class="p-0 p-0 img-fluid"><img src="./im/LinkedIn.png" class="contactIcons" alt="LinkedIn's Logo" ></a>
 			</div>
-		</div>
-		
-		<h2 class="text-center bg-dark mt-0 mb-0 p-1 text-light">Download my CV</h2>
- 		<div class="jumbotron sectionBacks mb-0" id="myCV">
-			<div class="text-center">
-				<a href="./as/CVV16TEN.pdf" target="blank" class="p-0 pb-0 img-fluid"><img src="./im/Download.png" class="icons" alt="A picture of a cloud with a down arrow indictating where to click to download my CV">
+			
+			<div class="text-center col">
+  			<a href="https://github.com/LeChatParle" target="blank" class="p-0 p-0 img-fluid"><img src="./im/Github.png" class="contactIcons" alt="Github's Logo" ></a>
+			</div>
+			
+			<div class="text-center col">
+				<a href="./as/CVV16EN.pdf" target="blank" class="img-fluid"><img src="./im/CV.png" class="contactIcons" alt="A picture of a cloud with a down arrow indictating where to click to download my CV">
 				</a>
 			</div>
 		</div>
