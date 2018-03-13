@@ -43,6 +43,10 @@ nav {
 	background-color: #191919;
 }
 
+.quoteBackground {
+	background-color: #648ABA;
+}
+
 #photography {
 	background-color: #000000;
 }
@@ -78,11 +82,47 @@ nav {
 	color: #FF0000;
 }
 
-#triangle {
+.triangle {
 	width: 0;
 	height: 0;
 	border-bottom: 750px solid red;
 	border-right: 750px solid transparent;
 	bottom: 0;
 	position: fixed;
+}
+
+.biggerTriangle {
+	width: 0;
+	height: 0;
+	border-bottom: 1750px solid red;
+	border-right: 1750px solid transparent;
+	bottom: 0;
+	position: fixed;
+	transition: 0.7s all;
+}
+
+#clickToTweet, #getNewQuote {
+	position: absolute;
+	bottom: 0;
+	border-radius: 0px;
+	overflow: hidden;
+}
+
+#clickToTweet {
+	left: 0;
+}
+
+#getNewQuote {
+	right: 0;
+	padding: 10vw;
+}
+
+#quoteTitle {
+	font-weight: 900;
+	font-size: 32px;
+}
+
+.fa-quote-left, .fa-quote-right {
+	font-size: 100px;
+	padding: 10px;
 }

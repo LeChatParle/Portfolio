@@ -7,10 +7,10 @@
 		<meta name="author" content="Jeremy Edwards" > 
 		<meta name="description" content="A portfolio and showcase of Jeremy Edwards's web development work." > 
 		<meta name="keywords" content="website, javasrcipt, employee, work, jobs, portfolio, development" > 
-		<link href="#" rel="stylesheet" type="text/css" > 
 		<link rel="shortcut icon" href="#" /> 
 		<link rel="apple-touch-icon" href="#" /> 
     <title>Jeremy Edwards</title>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     	<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="./cs/main.css">
@@ -43,11 +43,10 @@
 		<div id="fullpage">
 		<!-- Column tags on the jumbotron divs causes image overflow issues unless you get rid of margins; Removed margins on top and bottom to ensure panels touch. Removed border radius to have straight edges-->
 		<div class="pr-5 section">
-			<div id="triangle"></div>
+			<div class="triangle" id="triangle"></div>
   		<div id="top">
 				<div class="p-0 pl-2 m-0">
 					<h2 class="m-0 pb-2" id="name">Jeremy Edwards</h2>
-					<!--<p class="justifiedText pr-3" id="intro">I currently git by in life working as a desktop support technician, but my hopes pull and push me in a new direction. I guess I'll just have to checkout this new branch life is fetching for me.</p>-->
 				</div>
 			</div>
 		</div>
@@ -64,7 +63,6 @@
 				</a>
      	</div>
 			
-			<!--To do: add photography gallary. Calm colors. Simplifiy contact and download to one bar.-->
      			
 			<!-- Keep the column tag here; it handles proper layout & img-fluid mantains size. Keep this code & comment to remember how to add additional projects. -->
 			<!--
@@ -73,13 +71,12 @@
    		</div>
 			-->
 			
-			<!--
-			Project idea: put "apps" hear, i.e. put "calculator" and wiki viewer here as full screen apps with "Exit App" buttons" that return to main website. This would be a great way show off my work.
-			-->
  		</div>
 			
 		<div class="mb-0 section text-center" id="apps">
-			<h3>Under construction: future home of my apps</h3>
+			<div class="col p-0 m-0 text-center slide">
+				<h3><a href="./as/quoteGenerator.html"><i class="fas fa-quote-left"></p></i><i class="fas fa-quote-right"></a></i></h3>
+			</div>
 		</div>
 			
 		<div class="mb-0 section" id="photography">
