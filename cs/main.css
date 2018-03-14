@@ -44,7 +44,7 @@ nav {
 }
 
 .quoteBackground {
-	background-color: #648ABA;
+	background-color: #4D1A68;
 }
 
 #photography {
@@ -125,4 +125,13 @@ nav {
 .fa-quote-left, .fa-quote-right {
 	font-size: 100px;
 	padding: 10px;
+}
+
+.fa-sun {
+	font-size: 100px;
+	padding: 10px;
+}
+
+.weatherBackground {
+	background-color: aquamarine;
 }

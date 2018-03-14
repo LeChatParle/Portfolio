@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Jeremy Edwards" > 
-    <title>Quotes</title>
+    <title>How's the Weather?</title>
     	<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="../cs/main.css">
@@ -15,6 +15,7 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed --> 
 		<script src="../js/bootstrap.js"></script>
 		<script src="../js/main.js"></script>
+		<script src="../js/weather.js"></script>
 		<script src="../js/jquery.fullpage.min.js"></script>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -24,25 +25,23 @@
 			  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
   	</head>
-<body>
+
+<body class="weatherBackground">
 	<nav class="navbar navbar-expand navbar-dark fixed-top bgColorNav overflow-hidden position-fixed m-0">
   	<div>
     	<ul class="navbar-nav">
-				<li class="nav-item"><a href="../index.html#app" class="nav-link colorizeText" id="logo">EBJ</a></li>
+				<li class="nav-item"><a href="../index.html#app/1" class="nav-link colorizeText" id="logo">EBJ</a></li>
     	</ul>
   	</div>
 	</nav>
 	
-	<div id="fullpage" >
-		<div class="pr-5 section quoteBackground">
-			<div class="p-5 text-center text-warning" id="quoteBox">
-  			<div id="quoteTitle"></div>
-  			<div id="quoteContent"></div> 
-			</div>
-			<a id="clickToTweet" class="btn btn-warning text-dark p-3 col-6" target="blank">Tweet</a>
-			<a id="getNewQuote" onclick="getQuote()" class="btn btn-warning text-dark p-3 m-0 col-6">Get New Quote</a>
+	<div id="fullpage">	
+		<div class="text-center mt-5 section ">
+  		<div><h1 id="city" class="text-center"></h1></div>
+  		<div class="p-0 btn" id="tempDiv"><p id="temperatureC" class="temperatureC p-0"><p></div>
+  		<div id="weatherDesc" class="p-0"></div>
+  		<img id="weatherIcon" width="10%"></img>
 		</div>
 	</div>
-	
 </body>
 </html>
