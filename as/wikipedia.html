@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Jeremy Edwards" > 
-    <title>Quotes</title>
+    <title>Wiki Search</title>
     	<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="../cs/main.css">
@@ -15,7 +15,7 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed --> 
 		<script src="../js/bootstrap.js"></script>
 		<script src="../js/main.js"></script>
-		<script src="../js/quotes.js"></script>
+		<script src="../js/wikipedia.js"></script>
 		<script src="../js/jquery.fullpage.min.js"></script>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -24,25 +24,29 @@
 			  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-  	</head>
+  </head>
 <body>
 	<nav class="navbar navbar-expand navbar-dark fixed-top bgColorNav overflow-hidden position-fixed m-0">
   	<div>
     	<ul class="navbar-nav">
-				<li class="nav-item"><a href="../index.html#app" class="nav-link colorizeText" id="logo">EBJ</a></li>
+				<li class="nav-item"><a href="../index.html#app/2" class="nav-link colorizeText" id="logo">EBJ</a></li>
     	</ul>
-  	</div>
+  		<div class="searchForms">
+    		<form id="formData">
+     			<input type="text" class="searchBox p-2 pt-3" id="textbox" placeholder="Wikipedia!">
+      		<input type="button" class="btn btn-primary p-1 mt-1 mb-3" id="submitButton" value="Search">
+    		</form>
+  		</div>
+		</div>
 	</nav>
 	
-	<div id="fullpage" >
-		<div class="pr-5 section quoteBackground">
-			<div class="p-5 text-center text-warning" id="quoteBox">
-  			<div id="quoteTitle"></div>
-  			<div id="quoteContent"></div> 
+	<div id="fullpage">
+		<div class="text-center">
+  		<div id="searchResults" class="text-center">
+    	<!--Jquery dynamically adds content here-->
 			</div>
-			<a id="clickToTweet" class="btn btn-warning text-dark p-3 col-6" target="blank">Tweet</a>
-			<a id="getNewQuote" onclick="getQuote()" class="btn btn-warning text-dark p-3 m-0 col-6">Get New Quote</a>
 		</div>
+  	<button class="text-center btn btn-primary buttonBlue"><a href="https://en.wikipedia.org/wiki/Special:Random" target="blank"><p class="text-light mt-3">Go to a random article on Wikipedia</p></a></button>
 	</div>
 	
 </body>
