@@ -109,7 +109,7 @@ nav {
 
 /*Quote App CSS*/
 
-#quoteBox {
+#quoteBox, .quoteBackground {
 	width: 70%;
 	margin: auto;
 }
