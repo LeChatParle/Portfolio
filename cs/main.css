@@ -43,10 +43,6 @@ nav {
 	background-color: #191919;
 }
 
-.quoteBackground {
-	background-color: #4D1A68;
-}
-
 #photography {
 	background-color: #000000;
 }
@@ -101,6 +97,22 @@ nav {
 	transition: 0.7s all;
 }
 
+.fa-quote-left, .fa-quote-right {
+	font-size: 100px;
+	padding: 10px;
+}
+
+.fa-sun, .fa-wikipedia-w, .fa-twitch {
+	font-size: 100px;
+	padding: 10px;
+}
+
+/*Quote App CSS*/
+
+.quoteBackground {
+	background-color: #4D1A68;
+}
+
 #clickToTweet, #getNewQuote {
 	position: absolute;
 	bottom: 0;
@@ -122,19 +134,13 @@ nav {
 	font-size: 32px;
 }
 
-.fa-quote-left, .fa-quote-right {
-	font-size: 100px;
-	padding: 10px;
-}
-
-.fa-sun, .fa-wikipedia-w {
-	font-size: 100px;
-	padding: 10px;
-}
+/*Weather App CSS*/
 
 .weatherBackground {
 	background-color: aquamarine;
 }
+
+/*Wiki App CSS*/
 
 .buttonBlue {
   position: fixed;
@@ -171,4 +177,24 @@ nav {
 
 #searchResults a {
 	text-decoration: none;
+}
+
+/*Twitch App CSS*/
+
+.displayPic {
+  width: 100px;
+  border-radius: 100px;
+}
+
+#twitchDiv {
+	padding-top: 5%;
+}
+
+#twitchDiv div {
+  padding: 10px;
+}
+
+#twitchDiv a, #twitchDiv a:hover {
+  text-decorations: none !important;
+	color: #000000;
 }
