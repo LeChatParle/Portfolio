@@ -109,6 +109,11 @@ nav {
 
 /*Quote App CSS*/
 
+#quoteBox {
+	width: 70%;
+	margin: auto;
+}
+
 .quoteBackground {
 	background-color: #4D1A68;
 }
@@ -164,11 +169,9 @@ nav {
 }
 
 #searchResults {
-  position: absolute;
-  width: 70vw;
-  left: 20vw;
-  top: 75px;
-	padding: 0 10vw 0 10vw;
+  width: 40%;
+	margin: auto;
+	margin-top: 100px;
 }
 
 #searchResults p {
