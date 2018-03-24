@@ -14,7 +14,7 @@ body {
 }
 
 .contactIcons {
-	width: 10%;
+	width: 30%;
 }
 
 #top {
@@ -87,22 +87,12 @@ nav {
 	position: fixed;
 }
 
-.biggerTriangle {
-	width: 0;
-	height: 0;
-	border-bottom: 1750px solid red;
-	border-right: 1750px solid transparent;
-	bottom: 0;
-	position: fixed;
-	transition: 0.7s all;
-}
-
 .fa-quote-left, .fa-quote-right {
-	font-size: 100px;
+	font-size: 80px;
 	padding: 10px;
 }
 
-.fa-sun, .fa-wikipedia-w, .fa-twitch {
+.fa-sun, .fa-wikipedia-w, .fa-twitch, .fa-calculator {
 	font-size: 100px;
 	padding: 10px;
 }
@@ -202,4 +192,13 @@ nav {
 #twitchDiv a, #twitchDiv a:hover {
   text-decorations: none !important;
 	color: #000000;
+}
+
+/*Calculator App CSS*/
+.stopBorders button {
+	border-radius: 0px !important;
+} 
+
+.stopBorders {
+	background: #FF9000;
 }
