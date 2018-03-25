@@ -92,7 +92,7 @@ nav {
 	padding: 10px;
 }
 
-.fa-sun, .fa-wikipedia-w, .fa-twitch, .fa-calculator {
+.fa-sun, .fa-wikipedia-w, .fa-twitch, .fa-calculator, .fa-clock {
 	font-size: 100px;
 	padding: 10px;
 }
@@ -202,3 +202,29 @@ nav {
 .stopBorders {
 	background: #FF9000;
 }
+
+/*Pomodoro App CSS*/
+.pomo {
+	background: #99EEEE;
+}
+
+.pomo button {
+	border-radius: 0px;
+}
+
+#resetButton {
+  position: fixed;
+	height: 50px;
+  bottom: 0px;
+}
+
+#pomoButtons {
+	position: fixed;
+	width: 100%;
+  bottom: 50px;
+}
+
+#secondsCounter, #whatDo {
+  font-size: 10vw;
+}
+
