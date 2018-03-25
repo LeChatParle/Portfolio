@@ -159,7 +159,7 @@ $(document).ready(function() {
   
   //When user clicks ., appends
   $("#dot").on('click',function(){
-    if ($("#calcDisp").attr("dataState") !== 0 && $("#calcDisp").attr("operationState") === 0) {
+    if ($("#calcDisp").attr("dataState") !== 0 && $("#calcDisp").attr("operationState") == 0) {
       $("#calcDisp").append(".");
       $("#calcDisp").attr("operationState", 1);
     }
@@ -167,13 +167,13 @@ $(document).ready(function() {
   
   //When user clicks -, appends
   $("#minus").on('click',function(){
-    if ($("#calcDisp").attr("dataState") !== 0 && $("#calcDisp").attr("operationState") === 0) {
+    if ($("#calcDisp").attr("dataState") !== 0 && $("#calcDisp").attr("operationState") == 0) {
       $("#calcDisp").append("-");
       $("#calcDisp").attr("operationState", 1);
     }
   });
   
-  //Return evaluated data, clears display
+  //Return evaluated data, clears main display, but updates secondary memory display
   $("#equals").on('click',function(){
     var rawCalcData = $("#calcDisp").text();
     var evalData = eval(rawCalcData);
