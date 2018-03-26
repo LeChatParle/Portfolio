@@ -22,11 +22,21 @@ body {
 	bottom: 1px;
 }
 
-#name, #intro {
+#name {
 	color: red;
 	mix-blend-mode: difference;
-	font-size: 10vw;
+	font-size: 23vw;
+	height: 100%;
 	transform: skew(-15deg);
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-bottom: 53.5rem solid red;
+	border-right: 53.5rem solid transparent;
+	bottom: 0;
+	position: fixed;
 }
 
 #logo {
@@ -76,15 +86,6 @@ nav {
 
 .nav-item > a.nav-link.colorizeText:hover, #logo:hover {
 	color: #FF0000;
-}
-
-.triangle {
-	width: 0;
-	height: 0;
-	border-bottom: 750px solid red;
-	border-right: 750px solid transparent;
-	bottom: 0;
-	position: fixed;
 }
 
 .fa-quote-left, .fa-quote-right {
