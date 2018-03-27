@@ -176,7 +176,7 @@ $(document).ready(function() {
   //Return evaluated data, clears main display, but updates secondary memory display
   $("#equals").on('click',function(){
     var rawCalcData = $("#calcDisp").text();
-    var evalData = eval(rawCalcData);
+    var evalData = Number(eval(rawCalcData));//without Number();, leading zeros cause problems. 
     $("#calcResults").html(evalData);
     $("#calcDisp").html("0");
     $("#calcDisp").attr("dataState", 0);
