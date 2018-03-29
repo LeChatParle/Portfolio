@@ -6,7 +6,7 @@ html {
 }
 
 body {
-	background-color: #E1E1E1;
+	background-color: #555555;
 }
 
 .justifiedText {
@@ -19,24 +19,22 @@ body {
 
 #top {
 	position: absolute;
-	bottom: 1px;
+	margin: auto;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	z-index: auto;
 }
 
-#name {
+#name1, #name2 {
 	color: red;
 	mix-blend-mode: difference;
-	font-size: 23vw;
-	height: 100%;
+	font-size: 18vw;
 	transform: skew(-15deg);
 }
 
-.triangle {
-	width: 0;
-	height: 0;
-	border-bottom: 53.5rem solid red;
-	border-right: 53.5rem solid transparent;
-	bottom: 0;
-	position: fixed;
+#mainDiv {
+	background: black;
 }
 
 #logo {

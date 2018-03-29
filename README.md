@@ -18,9 +18,15 @@ This site is currently hosted on a free server, so if there are any issues, plea
 
 ## Planned Feature Improvements
 
-### Main Page
-1. Get splash to maintain proportions on viewport size change or other devices
-
 ### Calculator App
 1. Full scientific calculator
 
+### Twitch App
+1. Better design
+
+### Pomodoro Timer
+1. Better color scheme
+
+### Wikipedia App
+1. Better search bar design
+2. Better overall layout
