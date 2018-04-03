@@ -29,7 +29,7 @@ body {
 #name1, #name2 {
 	color: red;
 	mix-blend-mode: difference;
-	font-size: 18vw;
+	font-size: 8vw;
 	transform: skew(-15deg);
 }
 
@@ -51,6 +51,10 @@ nav {
 	background-color: #191919;
 }
 
+#apps {
+	background: black;
+}
+
 #photography {
 	background-color: #000000;
 }
@@ -66,7 +70,7 @@ nav {
 	pointer-events: none; /*This prevents the text from interrupting the hover event on the image below*/
 }
 .actualImage {
-	width: 70%;
+	width: 60%;
 }
 
 .actualImage:hover {
@@ -86,14 +90,22 @@ nav {
 	color: #FF0000;
 }
 
-.fa-quote-left, .fa-quote-right {
-	font-size: 80px;
-	padding: 10px;
+.fa-quote-left {
+	font-size: 6vw;
+	color: white;
 }
 
-.fa-sun, .fa-wikipedia-w, .fa-twitch, .fa-calculator, .fa-clock {
-	font-size: 100px;
-	padding: 10px;
+.fa-sun, .fa-wikipedia-w, .fa-twitch, .fa-calculator, .fa-clock, .fa-github, .fa-linkedin-in, .fa-file-pdf {
+	font-size: 8vw;
+	color: white;
+}
+
+.fa-quote-left :hover {
+	color: #FF0000;
+}
+
+.fa-sun :hover, .fa-wikipedia-w :hover, .fa-twitch :hover, .fa-calculator :hover, .fa-clock :hover, .fa-github :hover, .fa-linkedin-in :hover, .fa-file-pdf :hover {
+	color: #FF0000;
 }
 
 /*Quote App CSS*/
@@ -227,3 +239,100 @@ nav {
   font-size: 10vw;
 }
 
+/*Tic Tac Toe App CSS*/
+#gameInfo button, #gameInfo div {
+  border-radius: 0px;
+}
+
+.gameContainer {
+  text-align: center;
+}
+
+.gameContainer > .blue {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  font-size: 48px;
+}
+
+.gameContainer > .red {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 48px;
+}
+
+.gameContainer > .gray {
+  background-color: gray;
+  color: purple;
+  padding: 24px;
+  font-size: 24px;
+}
+
+.gameContainer > div {
+  border: 2px solid blue;
+  border-radius: 25px;
+  background-color: lightgray;
+  padding: 35px;
+  color: green;
+}
+
+.redBig {
+  background-color: red;
+  font-size: 36px;
+}
+
+.red {
+  background-color: red;
+}
+
+.unclickable {
+  pointer-events: none;
+}
+
+
+/*Simon App CSS*/
+#restart {
+  display: none;
+}
+
+.container {
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-style: italic;
+  font-size: 45px;
+  line-height: 30px;
+}
+
+#c, #d, #e, #f {
+  height: 165px;
+  width: 165px;
+  margin: 15px 4px 4px 4px;
+  box-shadow: 5px 5px 5px #888;
+}
+
+#c:focus {
+  color: #fff;
+  background-color: #1c8cff;
+  border-color: #46b8da;
+}
+
+#d:focus {
+  color: #fff;
+  background-color: #13ff7c;
+  border-color: #4cae4c;
+}
+
+#e:focus {
+  color: #fff;
+  background-color: #fed93f;
+  border-color: #fed93f;
+}
+
+#f:focus {
+  color: #fff;
+  background-color: #ff4c4c;
+  border-color: #d43f3a;
+}

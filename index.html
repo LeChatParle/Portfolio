@@ -44,59 +44,63 @@
 		<!-- Column tags on the jumbotron divs causes image overflow issues unless you get rid of margins; Removed margins on top and bottom to ensure panels touch. Removed border radius to have straight edges-->
 		<div class="pr-5 section" data-anchor="landing" id="mainDiv">
   		<div id="top">
-				<div class="p-0 pl-5 m-0">
-					<h2 class="m-0 pb-3 text-center" id="name1">The</h2>
-					<h2 class="m-0 pb-3 text-center" id="name2">Experience</h2>
+				<div class="p-0 m-0">
+					<h2 class="m-0 pb-3 text-center" id="name1">tout à propos</h2>
+					<h2 class="m-0 pb-3 text-center" id="name2">de moi</h2>
 				</div>
 			</div>
 		</div>
 
 		<!--In order to have the picture dim and the text overlay, include class="col websitePicture p-0 m-0" on the div of the image, include class="img-fluid p-0 m-0 actualImage" on the img, include overlayDIV on the div containing the text, and include overlayTitle and overlayBody on the h3 and p, respectively. All the specifics are handled with CSS and JavaScript.-->
-		
-		<!--
-		<h2 class="text-center bg-dark m-0 p-1 text-light">Portfolio</h2>
-		-->
  		<div class="mb-0 sectionBacks section" id="portfolio" data-anchor="work">
    		<div class="col p-0 m-0 text-center slide">
    			<a href="http://www.mandle-edwards.com" target="blank" class="websitePicture"><img src="https://i.imgur.com/2fKrNAi.png" class="img-fluid p-0 m-0 actualImage" alt="A picture of the website for Mandle Edwards Surveying">
-					<div class="overlayDIV"><h3 class="overlayTitle">Mandle-Edwards Surveying</h3><p class="overlayBody">I designed this website in 2012 to upgrade their site from a premade, link-saturated mess.</p></div>
+					<div class="overlayDIV"><h3 class="overlayTitle">Mandle-Edwards Surveying</h3><p class="overlayBody p-2">I designed this website in 2012 to upgrade their site from a premade, link-saturated mess.</p></div>
 				</a>
      	</div>
 			
-     			
-			<!-- Keep the column tag here; it handles proper layout & img-fluid mantains size. Keep this code & comment to remember how to add additional projects. -->
-			<!--
- 			<div class="col">
-    		<a href="#top"><img src="" class="img-fluid" alt="A picture of the website you are on"></a>
-   		</div>
-			-->
  		</div>
 			
 		<!--App section to put projects as I create them-->	
-		<div class="section text-center" id="apps" data-anchor="app">
+		<div class="section text-center pr-3" id="apps" data-anchor="app">
 			<div class="row">
-				<div class="col-4 p-5">
-					<h3><a href="./as/quoteGenerator.html" title="Quote Generator"><i class="fas fa-quote-left"></i><i class="fas fa-quote-right"></i></a></h3>
+				<div class="col-4">
+					<h3><a href="./as/quoteGenerator.html" title="Quote Generator"><i class="fas fa-quote-left"></i></a></h3>
 				</div>
-				<div class="col-4 p-5">
+				<div class="col-4">
 					<h3><a href="./as/weather.html" title="Weather App"><i class="fas fa-sun"></i></a></h3>
 				</div>
-				<div class="col-4 p-5">
+				<div class="col-4">
 					<h3><a href="./as/wikipedia.html" title="Wikipedia App"><i class="fab fa-wikipedia-w"></i></a></h3>
 				</div>
-				<div class="col-4 p-5">
+				<div class="col-4 pt-5">
 					<h3><a href="./as/twitch.html" title="Twitch App"><i class="fab fa-twitch"></i></a></h3>
 				</div>
-				<div class="col-4 p-5">
+				<div class="col-4 pt-5">
 					<h3><a href="./as/calculator.html" title="Calculator App"><i class="fas fa-calculator"></i></a></h3>
 				</div>
-				<div class="col-4 p-5">
+				<div class="col-4 pt-5">
 					<h3><a href="./as/pomodoro.html" title="Pomodoro App"><i class="far fa-clock"></i></a></h3>
 				</div>
 			</div>
 		</div>
+	
+		<div class="m-0 section sectionBacks" id="contactMe" data-anchor="contacts">
+			<div class="row">
+				<div class="text-center col-4">
+					<a href="https://github.com/LeChatParle" target="blank" class="p-0 p-0 img-fluid"><i class="fab fa-github"></i></a>
+				</div>
+				<div class="text-center col-4">
+					<a href="https://www.linkedin.com/in/jeremybedwards/" target="blank" class="p-0 p-0 img-fluid"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<div class="text-center col-4">
+					<a href="./as/CVV16EN.pdf" target="blank" class="img-fluid"><i class="far fa-file-pdf"></i>
+					</a>
+				</div>
+			</div>
+		</div>
 			
-		<!--This is the photography section to show off some of my skills, esp. vis-à-vis Photoshop-->	
+			<!--This is the photography section to show off some of my skills, esp. vis-à-vis Photoshop-->	
 		<div class="mb-0 section" id="photography" data-anchor="photos">
 			<div class="col p-0 m-0 text-center slide">
    			<img src="./im/Bicycle.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
@@ -135,21 +139,7 @@
    			<img src="./im/An Artist.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
      	</div>
 		</div>
-	
-		<div class="m-0 section" id="contactMe" data-anchor="contacts">
-			<div class="row">
-				<div class="text-center col-4">
-					<a href="https://github.com/LeChatParle" target="blank" class="p-0 p-0 img-fluid"><img src="./im/Github.png" class="contactIcons" alt="Github's Logo" ></a>
-				</div>
-				<div class="text-center col-4">
-					<a href="https://www.linkedin.com/in/jeremybedwards/" target="blank" class="p-0 p-0 img-fluid"><img src="./im/LinkedIn.png" class="contactIcons" alt="LinkedIn's Logo" ></a>
-				</div>
-				<div class="text-center col-4">
-					<a href="./as/CVV16EN.pdf" target="blank" class="img-fluid"><img src="./im/CV.png" class="contactIcons" alt="A picture of a cloud with a down arrow indictating where to click to download my CV">
-					</a>
-				</div>
-			</div>
-		</div>
+			
 		</div>
 		
   </body>
