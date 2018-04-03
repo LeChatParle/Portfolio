@@ -1,6 +1,6 @@
-// JavaScript Document
-
 $(document).ready(function() {
+	//These are the settings for fullpage.js based on what I set
+	"use strict";
 	$('#fullpage').fullpage({
 		scrollHorizontally: true,
 		dragAndMove: true,
@@ -12,6 +12,7 @@ $(document).ready(function() {
 		parallax: true,
 	});
 	
+	//Creates the hover effect on the Web Dev Experience Section
 	$(".overlayDIV").hide();
 	$(".websitePicture").hover(
 		function() {

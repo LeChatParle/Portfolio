@@ -1,12 +1,8 @@
-// JavaScript Document
-$(document).ready(function(){
-  var currentLatitude;
-  var currentLongitude; 
-	
-  getGeoData();
-});
+var currentLatitude;
+var currentLongitude;
 
 function getGeoData() {
+	"use strict";
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
     	currentLatitude = position.coords.latitude;
@@ -16,7 +12,10 @@ function getGeoData() {
   }
 }
 
+getGeoData();
+
 function getWeather() {
+	"use strict";
   var weatherDesc;
   var city;
   var temperatureC;
@@ -39,7 +38,7 @@ function getWeather() {
       $("img").attr('src', data.weather[0].icon);
       
       $("#tempDiv").on('click',function(){
-        if ($("#tempDiv").attr('data-click-state') == 1) {
+        if ($("#tempDiv").attr('data-click-state') === 1) {
           $("#tempDiv").attr('data-click-state', 0);
           $("#temperatureC").html(temperatureC + "ºC");
         } else {
