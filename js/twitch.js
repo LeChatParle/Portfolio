@@ -1,9 +1,7 @@
-// JavaScript Document
-$(document).ready(function () {
-  getUser();
-});
-
+//Performs an ajax call to get data on a set number of twitch users, then displays the information
 function getUser() {
+	"use strict";
+	
   $.ajax({
     dataType: 'json',
     url: 'https://api.twitch.tv/helix/users?login=OgamingSC2&login=freecodecamp&login=ESL_SC2', //Request for three specific users
@@ -35,6 +33,7 @@ function getUser() {
         }, 
     
         success: function(twitchData) { 
+					//This is where is writes the elements to the page
           $("#twitchDiv").append("<a href='https://www.twitch.tv/ogamingsc2' target='blank'><div><img class='displayPic' src='" + t1pp + "'><h3>" + t1dn + "</h3><p id='ogsc2'></p></div></a>");
           $("#twitchDiv").append("<a href='https://www.twitch.tv/freecodecamp' target='blank'><div><img class='displayPic' src='" + t2pp + "'><h3>" + t2dn + "</h3><p id='fcc'></p></div></a>");
           $("#twitchDiv").append("<a href='https://www.twitch.tv/esl_sc2' target='blank'><div><img class='displayPic' src='" + t3pp + "'><h3>" + t3dn + "</h3><p id='esl'></p></div></a>");
@@ -56,3 +55,5 @@ function getUser() {
     }
   });
 }
+
+getUser();

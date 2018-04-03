@@ -1,5 +1,7 @@
 // JavaScript Document
 $(document).ready(function() {
+	"use strict";
+	
   var secs = 0;
   var mins = 25;
   var restSecs = 0;

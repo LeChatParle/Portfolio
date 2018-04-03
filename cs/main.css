@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/* This document should only be used to override Bootstrap styles */
+
+/* Basics for all sections and pages */
 
 html {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
@@ -13,6 +14,12 @@ body {
 	text-align: justify;
 }
 
+.sectionBacks {
+	background-color: #191919;
+}
+
+/*Nav bar and all that resides inside of it*/
+
 nav {
 	line-height: 10px;
 }
@@ -21,9 +28,17 @@ nav {
 	background-color: #000000;
 }
 
-.nav-item > a.nav-link.colorizeText:hover, #logo:hover {
+#logo {
+	color: #FFFFFF;
+	font-weight: 900;
+	font-size: 32px;
+}
+
+#logo:hover {
 	color: #FF0000;
 }
+
+/*First Section*/
 
 #top {
 	position: absolute;
@@ -42,16 +57,6 @@ nav {
 
 #mainDiv {
 	background: #000000;
-}
-
-#logo {
-	color: #FFFFFF;
-	font-weight: 900;
-	font-size: 32px;
-}
-
-.sectionBacks {
-	background-color: #191919;
 }
 
 /*Web Dev Experience Section*/
@@ -151,6 +156,24 @@ nav {
 	background-color: #D1F7FF;
 }
 
+#city {
+	font-size: 15vw;
+}
+
+#temperatureC {
+	position: absolute;
+	left: 25px;
+	bottom: -20px;
+	font-size: 10vw;
+}
+
+#weatherDesc {
+	position: absolute;
+	right: 25px;
+	bottom: -20px;
+	font-size: 10vw;
+}
+
 /*Wiki App CSS*/
 
 .buttonBlue {
@@ -178,6 +201,7 @@ nav {
   width: 40%;
 	margin: auto;
 	margin-top: 100px;
+	color: #000000;
 }
 
 #searchResults p {

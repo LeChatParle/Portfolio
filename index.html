@@ -35,99 +35,67 @@
 		<nav class="navbar navbar-expand navbar-dark fixed-top bgColorNav overflow-hidden position-fixed m-0">
   			<div>
     			<ul class="navbar-nav">
-						<li class="nav-item"><a href="#landing" class="nav-link colorizeText" id="logo">EBJ</a></li>
+						<li class="nav-item"><a href="#landing" class="nav-link" id="logo">EBJ</a></li>
     			</ul>
   			</div>
 		</nav>
 		
 		<div id="fullpage">
-		<!-- Column tags on the jumbotron divs causes image overflow issues unless you get rid of margins; Removed margins on top and bottom to ensure panels touch. Removed border radius to have straight edges-->
-		<div class="pr-5 section" data-anchor="landing" id="mainDiv">
-  		<div id="top">
-				<div class="p-0 m-0">
-					<h2 class="m-0 pb-3 text-center" id="name1">tout à propos</h2>
-					<h2 class="m-0 pb-3 text-center" id="name2">de moi</h2>
+			<!-- Column tags on the jumbotron divs causes image overflow issues unless you get rid of margins; Removed margins on top and bottom to ensure panels touch. Removed border radius to have straight edges-->
+			<div class="pr-5 section" data-anchor="landing" id="mainDiv">
+				<div id="top">
+					<div class="p-0 m-0">
+						<h2 class="m-0 pb-3 text-center" id="name1">tout à propos</h2>
+						<h2 class="m-0 pb-3 text-center" id="name2">de moi</h2>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<!--In order to have the picture dim and the text overlay, include class="col websitePicture p-0 m-0" on the div of the image, include class="img-fluid p-0 m-0 actualImage" on the img, include overlayDIV on the div containing the text, and include overlayTitle and overlayBody on the h3 and p, respectively. All the specifics are handled with CSS and JavaScript.-->
- 		<div class="mb-0 sectionBacks section" id="portfolio" data-anchor="work">
-   		<div class="col p-0 m-0 text-center slide">
-   			<a href="http://www.mandle-edwards.com" target="blank" class="websitePicture"><img src="https://i.imgur.com/2fKrNAi.png" class="img-fluid p-0 m-0 actualImage" alt="A picture of the website for Mandle Edwards Surveying">
-					<div class="overlayDIV"><h3 class="overlayTitle">Mandle-Edwards Surveying</h3><p class="overlayBody p-5">I designed this website in 2012 to upgrade their site, which previously was messy, poorly laid out, and difficult to use. Their site today is very simple, but it gets the job done for their needs</p></div>
-				</a>
-     	</div>
-			
- 		</div>
-			
-		<!--App section to put projects as I create them-->	
-		<div class="section text-center pr-3" id="apps" data-anchor="app">
-			<div class="row">
-				<div class="col-4 pb-5"><h3><a href="./as/quoteGenerator.html" title="Quote Generator"><i class="fas fa-quote-left"></i></a></h3></div>
-				<div class="col-4 pb-5"><h3><a href="./as/weather.html" title="Weather App"><i class="fas fa-sun"></i></a></h3></div>
-				<div class="col-4 pb-5"><h3><a href="./as/wikipedia.html" title="Wikipedia App"><i class="fab fa-wikipedia-w"></i></a></h3></div>
-				<div class="col-4 pt-5"><h3><a href="./as/twitch.html" title="Twitch App"><i class="fab fa-twitch"></i></a></h3></div>
-				<div class="col-4 pt-5"><h3><a href="./as/calculator.html" title="Calculator App"><i class="fas fa-calculator"></i></a></h3></div>
-				<div class="col-4 pt-5"><h3><a href="./as/pomodoro.html" title="Pomodoro App"><i class="far fa-clock"></i></a></h3></div>
-			</div>
-		</div>
-	
-		<div class="m-0 section sectionBacks" id="contactMe" data-anchor="contacts">
-			<div class="row">
-				<div class="text-center col-4">
-					<a href="https://github.com/LeChatParle" target="blank" class="p-0 p-0 img-fluid"><i class="fab fa-github"></i></a>
-				</div>
-				<div class="text-center col-4">
-					<a href="https://www.linkedin.com/in/jeremybedwards/" target="blank" class="p-0 p-0 img-fluid"><i class="fab fa-linkedin-in"></i></a>
-				</div>
-				<div class="text-center col-4">
-					<a href="./as/CVV16EN.pdf" target="blank" class="img-fluid"><i class="far fa-file-pdf"></i>
+			<!--In order to have the picture dim and the text overlay, include class="col websitePicture p-0 m-0" on the div of the image, include class="img-fluid p-0 m-0 actualImage" on the img, include overlayDIV on the div containing the text, and include overlayTitle and overlayBody on the h3 and p, respectively. All the specifics are handled with CSS and JavaScript.-->
+			<div class="mb-0 sectionBacks section" id="portfolio" data-anchor="work">
+				<div class="col p-0 m-0 text-center slide">
+					<a href="http://www.mandle-edwards.com" target="blank" class="websitePicture"><img src="https://i.imgur.com/2fKrNAi.png" class="img-fluid p-0 m-0 actualImage" alt="A picture of the website for Mandle Edwards Surveying">
+						<div class="overlayDIV"><h3>Mandle-Edwards Surveying</h3><p class="p-5">I designed this website in 2012 to upgrade their site, which previously was messy, poorly laid out, and difficult to use. Their site today is very simple, but it gets the job done for their needs</p></div>
 					</a>
 				</div>
+
 			</div>
-		</div>
-			
+
+			<!--App section to put projects as I create them-->	
+			<div class="section text-center pr-3" id="apps" data-anchor="app">
+				<div class="row">
+					<div class="col-4 pb-5"><h3><a href="./as/quoteGenerator.html" title="Quote Generator"><i class="fas fa-quote-left"></i></a></h3></div>
+					<div class="col-4 pb-5"><h3><a href="./as/weather.html" title="Weather App"><i class="fas fa-sun"></i></a></h3></div>
+					<div class="col-4 pb-5"><h3><a href="./as/wikipedia.html" title="Wikipedia App"><i class="fab fa-wikipedia-w"></i></a></h3></div>
+					<div class="col-4 pt-5"><h3><a href="./as/twitch.html" title="Twitch App"><i class="fab fa-twitch"></i></a></h3></div>
+					<div class="col-4 pt-5"><h3><a href="./as/calculator.html" title="Calculator App"><i class="fas fa-calculator"></i></a></h3></div>
+					<div class="col-4 pt-5"><h3><a href="./as/pomodoro.html" title="Pomodoro App"><i class="far fa-clock"></i></a></h3></div>
+				</div>
+			</div>
+
+			<div class="m-0 section sectionBacks" id="contactMe" data-anchor="contacts">
+				<div class="row">
+					<div class="text-center col-4"><a href="https://github.com/LeChatParle" target="blank" class="p-0 p-0 img-fluid"><i class="fab fa-github"></i></a></div>
+					<div class="text-center col-4"><a href="https://www.linkedin.com/in/jeremybedwards/" target="blank" class="p-0 p-0 img-fluid"><i class="fab fa-linkedin-in"></i></a></div>
+					<div class="text-center col-4"><a href="./as/CVV16EN.pdf" target="blank" class="img-fluid"><i class="far fa-file-pdf"></i></a></div>
+				</div>
+			</div>
+
 			<!--This is the photography section to show off some of my skills, esp. vis-à-vis Photoshop-->	
-		<div class="mb-0 section" id="photography" data-anchor="photos">
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="./im/Bicycle.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="./im/Birdhouse.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="./im/Field & Silo.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="./im/Making Waves.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="./im/Pipe Pump.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="im/IMG_0097.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="./im/IMG_0101.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="./im/IMG_0120.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="./im/IMG_0128.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="./im/IMG_0227.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="./im/IMG_0244.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-			<div class="col p-0 m-0 text-center slide">
-   			<img src="./im/An Artist.jpg" class="img-fluid p-0 m-0 myPhotos" alt="...">
-     	</div>
-		</div>
-			
+			<div class="mb-0 section" id="photography" data-anchor="photos">
+				<div class="col p-0 m-0 text-center slide"><img src="./im/Bicycle.jpg" class="img-fluid p-0 m-0 myPhotos" alt="A picture of a bicycle leaning against a wooden fence by a swamp at dawn"></div>
+				<div class="col p-0 m-0 text-center slide"><img src="./im/Birdhouse.jpg" class="img-fluid p-0 m-0 myPhotos" alt="..."></div>
+				<div class="col p-0 m-0 text-center slide"><img src="./im/Field & Silo.jpg" class="img-fluid p-0 m-0 myPhotos" alt="..."></div>
+				<div class="col p-0 m-0 text-center slide"><img src="./im/Making Waves.jpg" class="img-fluid p-0 m-0 myPhotos" alt="..."></div>
+				<div class="col p-0 m-0 text-center slide"><img src="./im/Pipe Pump.jpg" class="img-fluid p-0 m-0 myPhotos" alt="..."></div>
+				<div class="col p-0 m-0 text-center slide"><img src="im/IMG_0097.jpg" class="img-fluid p-0 m-0 myPhotos" alt="..."></div>
+				<div class="col p-0 m-0 text-center slide"><img src="./im/IMG_0101.jpg" class="img-fluid p-0 m-0 myPhotos" alt="..."></div>
+				<div class="col p-0 m-0 text-center slide"><img src="./im/IMG_0120.jpg" class="img-fluid p-0 m-0 myPhotos" alt="..."></div>
+				<div class="col p-0 m-0 text-center slide"><img src="./im/IMG_0128.jpg" class="img-fluid p-0 m-0 myPhotos" alt="..."></div>
+				<div class="col p-0 m-0 text-center slide"><img src="./im/IMG_0227.jpg" class="img-fluid p-0 m-0 myPhotos" alt="..."></div>
+				<div class="col p-0 m-0 text-center slide"><img src="./im/IMG_0244.jpg" class="img-fluid p-0 m-0 myPhotos" alt="..."></div>
+				<div class="col p-0 m-0 text-center slide"><img src="./im/An Artist.jpg" class="img-fluid p-0 m-0 myPhotos" alt="..."></div>
+			</div>
 		</div>
 		
   </body>

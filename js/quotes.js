@@ -1,9 +1,7 @@
-// JavaScript Document
-$(document).ready(function(){
-	getQuote();
-});
-
+//Performs ajax call to quote site, returns quote and then writes it to the page
 function getQuote() {
+	"use strict";
+	
 	var currentQuote; 
   var currentAuthor;
   
@@ -20,3 +18,5 @@ function getQuote() {
     }
   });
 }
+
+getQuote();

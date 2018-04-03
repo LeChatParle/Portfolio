@@ -1,5 +1,7 @@
 // JavaScript Document
 $(document).ready(function() {
+	"use strict";
+	
   //Sets attr to zero on load
   $("#calcDisp").attr("dataState", 0);
   $("#calcDisp").attr("operationState", 0);
