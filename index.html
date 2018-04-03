@@ -10,17 +10,16 @@
 		<link rel="shortcut icon" href="#" /> 
 		<link rel="apple-touch-icon" href="#" /> 
     <title>Jeremy Edwards</title>
-		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    	<!-- Bootstrap -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="./cs/main.css">
-		<link rel="stylesheet" href="./cs/jquery.fullpage.min.css">
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-		<script src="./js/jquery-1.11.3.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed --> 
-		<script src="./js/bootstrap.js"></script>
+		<!-- JS Files --> 
+		<script src="./js/jquery-3.3.1.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
 		<script src="./js/main.js"></script>
 		<script src="./js/jquery.fullpage.min.js"></script>
+		<script defer src="./js/fontawesome-all.min.js"></script>
+		<!-- CSS Files -->
+		<link rel="stylesheet" href="./cs/bootstrap.min.css">
+		<link rel="stylesheet" href="./cs/main.css">
+		<link rel="stylesheet" href="./cs/jquery.fullpage.min.css">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,11 +32,9 @@
 		
 		<!--Navbar does not collapse on smaller screens. That should be the next step, i.e. use a hamburger menu -->
 		<nav class="navbar navbar-expand navbar-dark fixed-top bgColorNav overflow-hidden position-fixed m-0">
-  			<div>
-    			<ul class="navbar-nav">
-						<li class="nav-item"><a href="#landing" class="nav-link" id="logo">EBJ</a></li>
-    			</ul>
-  			</div>
+			<div class="dropdown show">
+				<a href="#landing" class="nav-link pt-1 pl-0" id="logo">EBJ</a>
+			</div>
 		</nav>
 		
 		<div id="fullpage">
@@ -54,8 +51,11 @@
 			<!--In order to have the picture dim and the text overlay, include class="col websitePicture p-0 m-0" on the div of the image, include class="img-fluid p-0 m-0 actualImage" on the img, include overlayDIV on the div containing the text, and include overlayTitle and overlayBody on the h3 and p, respectively. All the specifics are handled with CSS and JavaScript.-->
 			<div class="mb-0 sectionBacks section" id="portfolio" data-anchor="work">
 				<div class="col p-0 m-0 text-center slide">
-					<a href="http://www.mandle-edwards.com" target="blank" class="websitePicture"><img src="https://i.imgur.com/2fKrNAi.png" class="img-fluid p-0 m-0 actualImage" alt="A picture of the website for Mandle Edwards Surveying">
-						<div class="overlayDIV"><h3>Mandle-Edwards Surveying</h3><p class="p-5">I designed this website in 2012 to upgrade their site, which previously was messy, poorly laid out, and difficult to use. Their site today is very simple, but it gets the job done for their needs</p></div>
+					<a href="http://www.mandle-edwards.com" target="blank" class="websitePicture">
+						<img src="https://i.imgur.com/2fKrNAi.png" class="img-fluid p-0 m-0 actualImage" alt="A picture of the website for Mandle Edwards Surveying">
+						<div class="overlayDIV"><h3>Mandle-Edwards Surveying</h3>
+							<p class="p-5">I designed this website in 2012 to upgrade their site, which previously was messy, poorly laid out, and difficult to use. Their site today is very simple, but it gets the job done for their needs</p>
+						</div>
 					</a>
 				</div>
 
