@@ -105,7 +105,7 @@ nav {
 	color: #FFFFFF;
 }
 
-.fa-sun, .fa-wikipedia-w, .fa-twitch, .fa-calculator, .fa-clock, .fa-github, .fa-linkedin-in, .fa-file-pdf {
+.fa-sun, .fa-wikipedia-w, .fa-twitch, .fa-calculator, .fa-clock, .fa-github, .fa-linkedin-in, .fa-file-pdf, .fa-gamepad {
 	font-size: 8vw;
 	color: #FFFFFF;
 }
@@ -114,7 +114,7 @@ nav {
 	color: #FF0000;
 }
 
-.fa-sun :hover, .fa-wikipedia-w :hover, .fa-twitch :hover, .fa-calculator :hover, .fa-clock :hover, .fa-github :hover, .fa-linkedin-in :hover, .fa-file-pdf :hover {
+.fa-sun :hover, .fa-wikipedia-w :hover, .fa-twitch :hover, .fa-calculator :hover, .fa-clock :hover, .fa-github :hover, .fa-linkedin-in :hover, .fa-file-pdf :hover, .fa-gamepad :hover {
 	color: #FF0000;
 }
 
