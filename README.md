@@ -9,11 +9,7 @@ This site is currently hosted on a free server, so if there are any issues, plea
 1. Hitting enter after entering a search parameter clears the field instead of searching.
 
 ### Calculator App
-1. Not currently possible to have a negative number start an expression.
-2. Clicking 0 as the first digit of a number continues to add more. It should
-   check if the leading digit is a 0 and there is no decimal, and if so, don't add another. 
-3. Unable to create decimals if the first number isn't explictly zero.
-4. Unable to clear history
+1. No currently known bugs ... I just wanna brag here, because there were a tonne. 
 
 ## Planned Feature Improvements
 
