@@ -230,7 +230,7 @@ nav {
 }
 
 #twitchDiv a, #twitchDiv a:hover {
-  text-decorations: none !important;
+  text-decoration: none;
 	color: #000000;
 }
 

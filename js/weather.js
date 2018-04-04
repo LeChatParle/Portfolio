@@ -38,7 +38,6 @@ function getWeather() {
       $("#weatherDesc").html(weatherDesc);
       $("#city").html(city);
       $(".temperatureC").html(temperatureC + "ºC");
-      $("img").attr('src', data.weather[0].icon);
       
 			//Allows user to convert to the devil's measurement
       $("#tempDiv").on('click',function(){
