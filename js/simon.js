@@ -1,20 +1,29 @@
 $(document).ready(function () {
 	"use strict";
 
-	var noteList = [];
-	var playerNoteList = [];
-	var intervaTime = 2000;
+	var sounds = [];
+	var playerSounds = [];
+	var waitInterval = 2000;
 	var step = 0;
 	var level = 0;
-	var ready = false;
+	var gameStarted = false;
 	var seq, timeout;
+	var blueSound = 'http://torchcodelab.com/media/c_note.mp3';
+  var audioBlue = new Audio(blueSound);
+	var greenSound = 'http://torchcodelab.com/media/d_note.mp3';
+  var audioGreen = new Audio(greenSound);
+	var yellowSound = 'http://torchcodelab.com/media/e_note.mp3';
+  var audioYellow = new Audio(yellowSound);
+	var redSound = 'http://torchcodelab.com/media/f_note.mp3';
+  var audioRed = new Audio(redSound);
+	
 	$('#restart').hide();
 	$('#startGame').show();
 
 	//Starts game on button click
 	$('#startGame').on('click', function() {
-		ready = true;
-		intervaTime = 1000;
+		gameStarted = true;
+		waitInterval = 1000;
 		$('#startGame').hide();
 		$('#restart').show();
 		start();
@@ -26,14 +35,14 @@ $(document).ready(function () {
 		clearTimeout(timeout);
 		$('#startGame').show();
 		$(this).hide();
-		ready = false;
+		gameStarted = false;
 	});
 
 	//Resets level, notes, etc
 	function reset() {
-		noteList = genNotes();
+		sounds = genNotes();
 		$('#level').text("Level: 0");
-		playerNoteList = [];
+		playerSounds = [];
 		step = 0;
 		level = 0;
 	}
@@ -44,13 +53,16 @@ $(document).ready(function () {
 		playNoteSeq();
 	}
 
+	/*
+	Checks to see if game has been started, if so, adds note to playerSounds array.
+	Then if the clicked notes match the played notes, next level, else fail.
+	*/
 	$('#blue, #green, #yellow, #red').on('click', function() {
-		// notes to be played if game hasnt started
-		if (ready) {
+		if (gameStarted) {
 			var clickedNote = this.id;
-			playerNoteList.push(clickedNote);
+			playerSounds.push(clickedNote);
 
-			if (playerNoteList.length === (step + 1)) {
+			if (playerSounds.length === (step + 1)) {
 				if (checkAllNotes()) {
 					nextLevel();
 				} else {
@@ -67,23 +79,23 @@ $(document).ready(function () {
 		step++;
 		$('#level').text('Level: ' + step);
 		playNoteSeq();
-		playerNoteList = [];
+		playerSounds = [];
 	}
 
 	//On failure, game resets after 3 seconds
 	function failedLevel() {
 		$('#level').text("Fail! Try again!");
 		setTimeout(function() { 
-			reset();
-			$('#startGame').show();
-			$('#restart').hide();
+		reset();
+		$('#startGame').show();
+		$('#restart').hide();
 		}, 3000);
 	}
 
 	//Confirms correct notes
 	function checkAllNotes() {
 		for (var i = 0; i <= step; i++) {
-			if (noteList[i] !== playerNoteList[i]) {
+			if (sounds[i] !== playerSounds[i]) {
 				return false;
 			}
 		}
@@ -92,8 +104,8 @@ $(document).ready(function () {
 
 	//Live checks notes
 	function checkSomeNotes() {
-		for (var i = 0; i < playerNoteList.length; i++) {
-			if (noteList[i] !== playerNoteList[i]) {
+		for (var i = 0; i < playerSounds.length; i++) {
+			if (sounds[i] !== playerSounds[i]) {
 				return false;
 			}
 		}
@@ -104,30 +116,25 @@ $(document).ready(function () {
 	function playNoteSeq() {
 		$('#blue, #green, #yellow, #red').css("pointer-events", "none");
 		timeout = setTimeout(function() {
-		level = 0;
-		seq = setInterval(playInterval, intervaTime); }, 1000);
+			level = 0;
+			seq = setInterval(playInterval, waitInterval); 
+		}, 1000);
 	}
 
 	function playInterval() {
-
-		playNote(noteList[level]);
+		playNote(sounds[level]);
 
 		// play all notes up to current step
 		if (step <= level) {
-
 			// make notes clickable
 			$('#blue, #green, #yellow, #red').css("pointer-events", "auto");
-
 			// stop setInterval 
 			clearInterval(seq);
 		}
 		level++;
 	}
-
-	// creates a random list of numbers that do not repeat, no 1,1...
-	// min: min number in range
-	// max: max number in range
-	// length: length of the number array to create
+ 
+	//Creates a random array of non-repeating numbers.
 	function random(min, max, length) {
 		var numbers = [];
 
@@ -144,9 +151,9 @@ $(document).ready(function () {
 				nextRandom = _random(min, max - 1);
 			} else {
 				if (_random(0, 1)) {
-					nextRandom = _random(previous + 1, max);
+					nextRandom = _random(min + 1, max);
 				} else {
-					nextRandom = _random(min, previous - 1);
+					nextRandom = _random(min, max - 1);
 				}
 			}
 
@@ -157,11 +164,11 @@ $(document).ready(function () {
 		return numbers;
 	}
 
-	// pair notes to their random numbers
+	//Pairs notes to random numbers
 	function genNotes() {
 		var randomNotes = [];
 		var notes = ['blue', 'green', 'yellow', 'red'];
-		var randomNum = random(0, 3, 20);
+		var randomNum = random(0, 3, 500); //The world record is 14 games of 31 moves, so I'll just set this to 500 so no one can win
 
 		for (var i = 0; i < randomNum.length; i++) {
 			randomNotes.push(notes[randomNum[i]]);
@@ -169,28 +176,38 @@ $(document).ready(function () {
 		return randomNotes;
 	}
 
-	$('#blue').click(function() {playNote('blue');});
-	$('#green').click(function() {playNote('green');});
-	$('#yellow').click(function() {playNote('yellow');});
-	$('#red').click(function() {playNote('red');});
+	//When notes are clicked, plays sounds
+	$('#blue').click(function() {audioBlue.play(); audioBlue.currentTime = 0;});
+	$('#green').click(function() {audioGreen.play(); audioGreen.currentTime = 0;});
+	$('#yellow').click(function() {audioYellow.play(); audioYellow.currentTime = 0;});
+	$('#red').click(function() {audioRed.play(); audioRed.currentTime = 0;});
 
-	// note is a char pulled from the id of each button
+	//Switch to determine which note to play based on array. Timeout keeps button lit
 	function playNote(note) {
 		// light up note
 		$('#' + note).focus();
 
-		// keep note lit for the full intervralTime
 		setTimeout(function() {
 			$('#' + note).blur();
-		}, intervaTime);
+		}, 500);
 
-		playAudioNote(note + 'Audio');
-
-		//Plays note then resets the audio file
-		function playAudioNote(note) {
-			var n = document.getElementById(note);
-			n.currentTime = 0;
-			n.play();
+		switch(note) {
+			case "blue":
+				audioBlue.play();
+				audioBlue.currentTime = 0;
+				break;
+			case "green":
+				audioGreen.play();
+				audioGreen.currentTime = 0;
+				break;
+			case "yellow":
+				audioYellow.play();
+				audioYellow.currentTime = 0;
+				break;
+			case "red":
+				audioRed.play();
+				audioRed.currentTime = 0;
+				break;
 		}
 	}
 });
