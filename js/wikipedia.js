@@ -1,30 +1,26 @@
-var formData;
-
 //Awaits click or enter press, then calls getDataFromWiki()
 $(document).ready(function(){
 	"use strict";
 	
+	var formData;
+	
 	//Checks for click events
   $("#submitButton").on("click", function() {
     formData = $('form :input').val();
-    getDataFromWiki();
-  });
-	
-	//Checks for keypress events
-	$("#submitButton").on( "keydown", function(event) {
-    if(event.which === 13) {
-			formData = $('form :input').val();
-    	getDataFromWiki();
-		}
+		$("#searchResults").empty();
+		$("#jqueryDiv").remove();
+		$("#jqueryBody").remove();
+		$("#splash").remove();
+    getDataFromWiki(formData);
   });
 });
   
 //Gets data from wiki by performing an ajax call and parsing the JSON data. 
-function getDataFromWiki() {
+function getDataFromWiki(page) {
 	"use strict";
 	
   $.ajax( {
-    url: "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent(formData) + "&prop=info&inprop=url&utf8=&format=json",
+    url: "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent(page) + "&prop=info&inprop=url&utf8=&format=json",
     dataType: 'jsonp',
     headers: { 'Api-User-Agent': 'WikiApp/0.1 (chatparle@me.com)' },
 		
@@ -38,6 +34,3 @@ function getDataFromWiki() {
     }
   });
 }
-
-
-

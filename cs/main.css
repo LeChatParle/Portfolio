@@ -195,6 +195,10 @@ nav {
 	border-radius: 25px;
 }
 
+#submitButton {
+	border-radius: 0px;
+}
+
 .searchForms {
   position: fixed;
   right: 0px;
@@ -302,6 +306,10 @@ nav {
   border-radius: 0px;
 }
 
+#blue:hover {background-color: #0067FF;}
+#green:hover {background-color: #03FF00;}
+#yellow:hover {background-color: #E5FF00;} 
+#red:hover {background-color: #FF0000;}
 #blue:focus {background-color: #0067FF;}
 #green:focus {background-color: #03FF00;}
 #yellow:focus {background-color: #E5FF00;} 

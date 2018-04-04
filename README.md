@@ -7,7 +7,6 @@ This site is currently hosted on a free server, so if there are any issues, plea
 
 ### Wikipedia App
 1. Hitting enter after entering a search parameter clears the field instead of searching.
-2. If you search for a second parameter after a first one, the link doesn't dynamically update, and links to the old search result.
 
 ### Calculator App
 1. Not currently possible to have a negative number start an expression.
@@ -26,7 +25,3 @@ This site is currently hosted on a free server, so if there are any issues, plea
 
 ### Pomodoro Timer
 1. Better color scheme
-
-### Wikipedia App
-1. Better search bar design
-2. Better overall layout

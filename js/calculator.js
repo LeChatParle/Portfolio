@@ -12,6 +12,14 @@ $(document).ready(function() {
     $("#calcDisp").attr("dataState", 0);
     $("#calcDisp").attr("operationState", 0);
   });
+	
+	//Resets display, history and attr on "clear all"
+  $("#clearAll").on('click',function(){
+    $("#calcDisp").html("0");
+		$("#calcResults").html("0");
+    $("#calcDisp").attr("dataState", 0);
+    $("#calcDisp").attr("operationState", 0);
+  });
   
   //When user clicks 0, either overwrites or appends
   $("#0").on('click',function(){

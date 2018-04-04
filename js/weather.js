@@ -21,7 +21,6 @@ function getWeather() {
   var city;
   var temperatureC;
   var temperatureF;
-  var weatherIcon;
   
 	//Uses ajax call to get JSON data from weather app based on geolocation
   $.ajax({
@@ -32,7 +31,6 @@ function getWeather() {
       city = data.name;
       temperatureC = Math.round(data.main.temp);
       temperatureF = temperatureC * 9 / 5 + 32;
-      weatherIcon = data.weather[0].icon;
       
 			//Writes weather data to page
       $("#weatherDesc").html(weatherDesc);
