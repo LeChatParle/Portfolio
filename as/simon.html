@@ -19,23 +19,22 @@
 <body>
 	
 	<nav class="navbar navbar-expand navbar-dark fixed-top bgColorNav overflow-hidden position-fixed m-0">
-		<div class="dropdown show">
+		<div>
 			<a href="../index.html#app" class="nav-link pt-1 pl-0" id="logo">EBJ</a>
+			<a class="nav-link text-center text-light pt-3" id="level">Level: 0</a>
 		</div>
 	</nav>
-	
+
 	<div class="row">
-		<button type="button" id="restart" class="btn btn-primary col-12">Restart</button>
-		<button type="button" id="startGame" class="btn btn-primary col-12">Start</button>
+		<button type="button" id="restart" class="btn col-12 text-light">Restart</button>
+		<button type="button" id="startGame" class="btn col-12 text-light">Start</button>
 	</div>
-
-	<h1 class="text-center text-light pt-5 pb-5 mt-4" id="level">Level: 0</h1>
-
-	<div class="row">
-		<button type="button" id="blue" class="btn btn-info col-6"></button>
-		<button type="button" id="green" class="btn btn-success col-6"></button><br>
-		<button type="button" id="yellow" class="btn btn-warning col-6"></button>
-		<button type="button" id="red" class="btn btn-danger col-6"></button>
+	
+	<div class="row" id="colors">
+		<button type="button" id="blue" class="btn btn-info col-3"></button>
+		<button type="button" id="green" class="btn btn-success col-3"></button>
+		<button type="button" id="yellow" class="btn btn-warning col-3"></button>
+		<button type="button" id="red" class="btn btn-danger col-3"></button>
 	</div>
 
 	<audio id="blueAudio"><source src="http://torchcodelab.com/media/c_note.mp3" type="audio/mpeg"></audio>
