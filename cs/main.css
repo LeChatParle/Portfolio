@@ -161,6 +161,24 @@ nav {
 	background-color: #D1F7FF;
 }
 
+#weatherPic {
+	position: absolute;
+	top: 75px;
+	right: 25px;
+}
+
+#time {
+	position: absolute;
+	top: 35px;
+	left: 5px;
+	font-size: 5vw;
+}
+
+#weatherIcon {
+	color: #000000;	
+	font-size: 5vw;
+}
+
 #city {
 	font-size: 15vw;
 }

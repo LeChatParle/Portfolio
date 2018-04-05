@@ -27,5 +27,5 @@ This site is currently hosted on a free server, so if there are any issues, plea
 
 ### Pomodoro Timer
 1. End timer sound now works!
-2. Leading zeros now display correctly!
+2. Time is now zero-filled to two integers!
 3. Better color scheme
