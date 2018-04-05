@@ -25,8 +25,8 @@ $(document).ready(function() {
   $("#0").on('click',function(){
     if (dataState === 0) {
 			dataState = 1;
+			operationState = 0;
       $("#calcDisp").html("0");
-      operationState = 0;
     } else {
       $("#calcDisp").append("0");
       operationState = 0;
@@ -37,8 +37,8 @@ $(document).ready(function() {
   $("#1").on('click',function(){
     if (dataState === 0) {
 			dataState = 1;
+			operationState = 0;
       $("#calcDisp").html("1");
-      operationState = 0;
     } else {
       $("#calcDisp").append("1");
       operationState = 0;
@@ -49,8 +49,8 @@ $(document).ready(function() {
   $("#2").on('click',function(){
     if (dataState === 0) {
 			dataState = 1;
-      $("#calcDisp").html("2");
       operationState = 0;
+      $("#calcDisp").html("2");
     } else {
       $("#calcDisp").append("2");
       operationState = 0;
@@ -61,8 +61,8 @@ $(document).ready(function() {
   $("#3").on('click',function(){
     if (dataState === 0) {
 			dataState = 1;
-      $("#calcDisp").html("3");
       operationState = 0;
+      $("#calcDisp").html("3");
     } else {
       $("#calcDisp").append("3");
       operationState = 0;
@@ -73,8 +73,8 @@ $(document).ready(function() {
   $("#4").on('click',function(){
     if (dataState === 0) {
 			dataState = 1;
-      $("#calcDisp").html("4");
       operationState = 0;
+      $("#calcDisp").html("4");
     } else {
       $("#calcDisp").append("4");
       operationState = 0;
@@ -85,8 +85,8 @@ $(document).ready(function() {
   $("#5").on('click',function(){
     if (dataState === 0) {
 			dataState = 1;
-      $("#calcDisp").html("5");
       operationState = 0;
+      $("#calcDisp").html("5");
     } else {
       $("#calcDisp").append("5");
       operationState = 0;
@@ -97,8 +97,8 @@ $(document).ready(function() {
   $("#6").on('click',function(){
     if (dataState === 0) {
 			dataState = 1;
-      $("#calcDisp").html("6");
       operationState = 0;
+      $("#calcDisp").html("6");
     } else {
       $("#calcDisp").append("6");
       operationState = 0;
@@ -109,8 +109,8 @@ $(document).ready(function() {
   $("#7").on('click',function(){
     if (dataState === 0) {
 			dataState = 1;
-      $("#calcDisp").html("7");
       operationState = 0;
+      $("#calcDisp").html("7");
     } else {
       $("#calcDisp").append("7");
       operationState = 0;
@@ -121,8 +121,8 @@ $(document).ready(function() {
   $("#8").on('click',function(){
     if (dataState === 0) {
 			dataState = 1;
-      $("#calcDisp").html("8");
       operationState = 0;
+      $("#calcDisp").html("8");
     } else {
       $("#calcDisp").append("8");
       operationState = 0;
@@ -133,8 +133,8 @@ $(document).ready(function() {
   $("#9").on('click',function(){
     if (dataState === 0) {
 			dataState = 1;
-      $("#calcDisp").html("9");
       operationState = 0;
+      $("#calcDisp").html("9");
     } else {
       $("#calcDisp").append("9");
       operationState = 0;

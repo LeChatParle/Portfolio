@@ -21,3 +21,13 @@ This site is currently hosted on a free server, so if there are any issues, plea
 
 ### Pomodoro Timer
 1. Better color scheme
+
+## Fixed Bugs
+
+### Calculator App
+1. Fixed bug where you could type unlimited leading zeros
+2. Fixed a bug where you couldn't type a negative number
+
+### Pomodoro Timer
+1. End timer sound now works!
+2. Leading zeros now display correctly!

@@ -223,24 +223,18 @@ nav {
 
 /*Twitch App CSS*/
 
-.displayPic {
-  width: 100px;
-  border-radius: 100px;
-}
-
 #twitchDiv {
-	padding-top: 3%;
-	width: 20%;
+	padding-top: 15%;
+	width: 100%;
 	margin: auto;
 }
 
 #twitchDiv div {
-  padding: 10px;
+  color: #FF0000;
 }
 
 #twitchDiv a, #twitchDiv a:hover {
   text-decoration: none;
-	color: #000000;
 }
 
 /*Calculator App CSS*/
@@ -256,7 +250,19 @@ nav {
 /*Pomodoro App CSS*/
 
 .pomo {
-	background: #99EEEE;
+	background: #00611A;
+}
+
+#timer {
+	position: absolute;
+	margin: auto;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#workDown, #workTime, #workUp, #restDown, #restTime, #restUp {
+	background: #000000;
 }
 
 .pomo button {
@@ -306,10 +312,6 @@ nav {
   border-radius: 0px;
 }
 
-#blue:hover {background-color: #0067FF;}
-#green:hover {background-color: #03FF00;}
-#yellow:hover {background-color: #E5FF00;} 
-#red:hover {background-color: #FF0000;}
 #blue:focus {background-color: #0067FF;}
 #green:focus {background-color: #03FF00;}
 #yellow:focus {background-color: #E5FF00;} 

@@ -43,8 +43,19 @@ $(document).ready(function() {
     } else if (audioPlayed === false && restDone === true) {
       audio.play();
       audioPlayed = true;
+			setTimeout(function() {audio.currentTime = 0;}, 1000);
     }
-    $("#secondsCounter").html(mins + ":" + secs);
+		
+		//If a one set of digits is less than 10, it appends a zero
+		if (secs < 10 && mins < 10) {
+			$("#secondsCounter").html("0" + mins + ":0" + secs);
+		} else if (secs < 10) {
+			$("#secondsCounter").html(mins + ":0" + secs);
+		} else if (mins < 10) {
+			$("#secondsCounter").html("0" + mins + ":" + secs);
+		} else {
+			$("#secondsCounter").html(mins + ":" + secs);
+		}
   }
   
   //Updates clock every second

@@ -8,13 +8,13 @@ $(document).ready(function () {
 	var level = 0;
 	var gameStarted = false;
 	var seq, timeout;
-	var blueSound = 'http://torchcodelab.com/media/c_note.mp3';
+	var blueSound = '../as/C.mp3';
   var audioBlue = new Audio(blueSound);
-	var greenSound = 'http://torchcodelab.com/media/d_note.mp3';
+	var greenSound = '../as/D.mp3';
   var audioGreen = new Audio(greenSound);
-	var yellowSound = 'http://torchcodelab.com/media/e_note.mp3';
+	var yellowSound = '../as/E.mp3';
   var audioYellow = new Audio(yellowSound);
-	var redSound = 'http://torchcodelab.com/media/f_note.mp3';
+	var redSound = '../as/F.mp3';
   var audioRed = new Audio(redSound);
 	
 	$('#restart').hide();
