@@ -242,13 +242,20 @@ nav {
 /*Twitch App CSS*/
 
 #twitchDiv {
-	padding-top: 15%;
-	width: 100%;
-	margin: auto;
+	position: absolute;
+	width: 75%;
+	text-align: left;
+	top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #twitchDiv div {
-  color: #FF0000;
+	margin-bottom: 10px;
+	background: #FF0000;
+	color: #000000;
+	padding: 25px 25px 25px 25px;
+	border-radius: 25px;
 }
 
 #twitchDiv a, #twitchDiv a:hover {

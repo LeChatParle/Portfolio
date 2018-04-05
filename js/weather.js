@@ -1,6 +1,5 @@
 var currentLatitude;
 var currentLongitude;
-var time24f;
 
 function getGeoData() {
 	"use strict";
@@ -19,12 +18,12 @@ function setTime() {
 	"use strict";
 	var date = new Date();
 	var y = date.getFullYear();
-	var M = date.getMonth(); // starts at 0
-	var d = date.getDate();  //returns the day of month
+	var M = date.getMonth();
+	var d = date.getDate(); 
 	var h = date.getHours();
 	var m = date.getMinutes();
 	var fullDate;
-	time24f = h + ":" + m;
+	var time24f = h + ":" + m;
 	
 	if (M < 10) { M = "0" + M;}
 	if (d < 10) { d = "0" + d;}
@@ -62,16 +61,13 @@ function getWeather() {
 			if (h < 19 || h > 6) {
 				switch (weatherDesc) {
 					case "Clear":
-						console.log("clear day");
 						$("#weatherPic").html("<i class='wi wi-day-sunny' id='weatherIcon'></i>");
 						break;
 
 					case "Clouds":
-						console.log("clouds");
 						$("#weatherPic").html("<i class='wi wi-day-cloudy' id='weatherIcon'></i>");
 						break;
 					case "Rain":
-						console.log("rain");
 						$("#weatherPic").html("<i class='wi wi-day-rain' id='weatherIcon'></i>");
 						break;
 					default:
@@ -81,15 +77,12 @@ function getWeather() {
 			} else {
 				switch (weatherDesc) {
 					case "Clear":
-						console.log("clear night");
 						$("#weatherPic").html("<i class='wi wi-night-clear' id='weatherIcon'></i>");
 						break;
 					case "Clouds":
-						console.log("clouds night");
 						$("#weatherPic").html("<i class='wi wi-night-cloudy-windy' id='weatherIcon'></i>");
 						break;
 					case "Rain":
-						console.log("rain night");
 						$("#weatherPic").html("<i class='wi wi-night-showers' id='weatherIcon'></i>");
 						break;
 					default:
