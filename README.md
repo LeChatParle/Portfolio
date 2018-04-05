@@ -19,10 +19,7 @@ This site is currently hosted on a free server, so if there are any issues, plea
 ### Twitch App
 1. Better design
 
-### Pomodoro Timer
-1. Better color scheme
-
-## Fixed Bugs
+## Fixed Bugs & Completed Feature Improvements
 
 ### Calculator App
 1. Fixed bug where you could type unlimited leading zeros
@@ -31,3 +28,4 @@ This site is currently hosted on a free server, so if there are any issues, plea
 ### Pomodoro Timer
 1. End timer sound now works!
 2. Leading zeros now display correctly!
+3. Better color scheme
