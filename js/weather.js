@@ -23,11 +23,13 @@ function setTime() {
 	var h = date.getHours();
 	var m = date.getMinutes();
 	var fullDate;
-	var time24f = h + ":" + m;
+	var time24f;
 	
 	if (M < 10) { M = "0" + M;}
 	if (d < 10) { d = "0" + d;}
+	if (m < 10) { m = "0" + m;}
 
+	time24f = h + ":" + m;
 	fullDate = y + "-" + M + "-" + d;
 	
 	$("#time").html(time24f);
@@ -41,6 +43,7 @@ function getWeather() {
   var temperatureF;
 	var date = new Date();
 	var h = date.getHours();
+	var dataClickState = 0;
 	
 	//Uses ajax call to get JSON data from weather app based on geolocation
   $.ajax({
@@ -50,7 +53,7 @@ function getWeather() {
       weatherDesc = data.weather[0].main;
       city = data.name;
       temperatureC = Math.round(data.main.temp);
-      temperatureF = temperatureC * 9 / 5 + 32;
+      temperatureF = Math.round(temperatureC * 9 / 5 + 32);
 			
 			//Writes weather data to page
       $("#weatherDesc").html(weatherDesc);
@@ -63,7 +66,6 @@ function getWeather() {
 					case "Clear":
 						$("#weatherPic").html("<i class='wi wi-day-sunny' id='weatherIcon'></i>");
 						break;
-
 					case "Clouds":
 						$("#weatherPic").html("<i class='wi wi-day-cloudy' id='weatherIcon'></i>");
 						break;
@@ -92,12 +94,12 @@ function getWeather() {
 			}
 					
 			//Allows user to convert to the devil's measurement
-      $("#tempDiv").on('click',function(){
-        if ($("#tempDiv").attr('data-click-state') === 1) {
-          $("#tempDiv").attr('data-click-state', 0);
+      $("#temperatureC").on('click',function(){
+        if (dataClickState === 1) {
+          dataClickState = 0;
           $("#temperatureC").html(temperatureC + "ºC");
         } else {
-          $("#tempDiv").attr('data-click-state', 1);
+          dataClickState = 1;
           $("#temperatureC").html(temperatureF + "ºF");
         }
       });
