@@ -25,6 +25,7 @@ function setTime() {
 	var fullDate;
 	var time24f;
 	
+	if (h < 10) { h = "0" + h;}
 	if (M < 10) { M = "0" + M;}
 	if (d < 10) { d = "0" + d;}
 	if (m < 10) { m = "0" + m;}
