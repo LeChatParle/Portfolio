@@ -61,7 +61,7 @@ function getWeather() {
       $(".temperatureC").html(temperatureC + "ºC");
 			
 			//Sets the weather icon based on time & conditions
-			if (h < 19 || h > 6) {
+			if (h < 19 && h > 6) {
 				switch (weatherDesc) {
 					case "Clear":
 						$("#weatherPic").html("<i class='wi wi-day-sunny' id='weatherIcon'></i>");
