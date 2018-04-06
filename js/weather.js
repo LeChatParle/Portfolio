@@ -40,6 +40,7 @@ function getWeather() {
 	"use strict";
   var weatherDesc;
   var city;
+	var temperatureK;
   var temperatureC;
   var temperatureF;
 	var date = new Date();
@@ -54,7 +55,8 @@ function getWeather() {
 			console.log(data);
       weatherDesc = data.weather[0].main;
       city = data.name;
-      temperatureC = Math.round(data.main.temp - 273.15);
+			temperatureK = Math.round(data.main.temp);
+      temperatureC = Math.round(data.main.temp - 273.15); //API returns temp in Kelvin
       temperatureF = Math.round(temperatureC * 9 / 5 + 32);
 			
 			//Writes weather data to page
@@ -95,15 +97,21 @@ function getWeather() {
 				}		
 			}
 					
-			//Allows user to convert to the devil's measurement
+			//Allows user to convert to Kelvin or the devil's measurement
       $("#temperatureC").on('click',function(){
-        if (dataClickState === 1) {
-          dataClickState = 0;
-          $("#temperatureC").html(temperatureC + "ºC");
-        } else {
-          dataClickState = 1;
-          $("#temperatureC").html(temperatureF + "ºF");
-        }
+				switch (dataClickState) {
+					case 0:
+						dataClickState++;
+          	$("#temperatureC").html(temperatureK + "K");
+						break;
+					case 1: 
+						dataClickState++;
+          	$("#temperatureC").html(temperatureF + "ºF");
+						break;
+					case 2:
+						dataClickState = 0;
+          	$("#temperatureC").html(temperatureC + "ºC");
+				}
       });
       
     }
