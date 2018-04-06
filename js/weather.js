@@ -48,12 +48,13 @@ function getWeather() {
 	
 	//Uses ajax call to get JSON data from weather app based on geolocation
   $.ajax({
-    url: 'https://fcc-weather-api.glitch.me/api/current?' + "lat=" + currentLatitude + "&lon=" + currentLongitude,
+    url: "https://api.openweathermap.org/data/2.5/weather?lat=" + currentLatitude + "&lon=" + currentLongitude +"&APPID=fef70b002c9741456fbf8d4466780a9d", 
 
     success: function(data) {
+			console.log(data);
       weatherDesc = data.weather[0].main;
       city = data.name;
-      temperatureC = Math.round(data.main.temp);
+      temperatureC = Math.round(data.main.temp - 273.15);
       temperatureF = Math.round(temperatureC * 9 / 5 + 32);
 			
 			//Writes weather data to page
@@ -61,7 +62,7 @@ function getWeather() {
       $("#city").html(city);
       $(".temperatureC").html(temperatureC + "ºC");
 			
-			//Sets the weather icon based on time & conditions
+			//Sets the weather icon based on time & conditions; As I learn new conditions, I write the code to handle them
 			if (h < 19 && h > 6) {
 				switch (weatherDesc) {
 					case "Clear":
