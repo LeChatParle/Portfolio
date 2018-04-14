@@ -24,144 +24,18 @@ $(document).ready(function() {
 		negState = 0;
   });
 
+	//$(this.id).text()
   //When user clicks 0, either overwrites or appends
-  $("#0").on('click',function(){
+  $("#0, #1, #2, #3, #4, #5, #6, #7, #8, #9").on('click',function(){
+		var thisId = this.id;
     if (dataState === 0) {
 			dataState = 1;
-			operationState = 0;
-			negState = 0;
-      $("#calcDisp").html("0");
+      $("#calcDisp").html( $("#" + thisId).text() );
     } else {
-      $("#calcDisp").append("0");
-      operationState = 0;
-			negState = 0;
+      $("#calcDisp").append( $("#" + thisId).text() );
     }
-  });
-
-  //When user clicks 1, either overwrites or appends
-  $("#1").on('click',function(){
-    if (dataState === 0) {
-			dataState = 1;
-			operationState = 0;
-			negState = 0;
-      $("#calcDisp").html("1");
-    } else {
-      $("#calcDisp").append("1");
-      operationState = 0;
-			negState = 0;
-    }
-  });
-
-  //When user clicks 2, either overwrites or appends
-  $("#2").on('click',function(){
-    if (dataState === 0) {
-			dataState = 1;
-      operationState = 0;
-			negState = 0;
-      $("#calcDisp").html("2");
-    } else {
-      $("#calcDisp").append("2");
-      operationState = 0;
-			negState = 0;
-    }
-  });
-
-  //When user clicks 4, either overwrites or appends
-  $("#3").on('click',function(){
-    if (dataState === 0) {
-			dataState = 1;
-      operationState = 0;
-			negState = 0;
-      $("#calcDisp").html("3");
-    } else {
-      $("#calcDisp").append("3");
-      operationState = 0;
-			negState = 0;
-    }
-  });
-
-  //When user clicks 4, either overwrites or appends
-  $("#4").on('click',function(){
-    if (dataState === 0) {
-			dataState = 1;
-      operationState = 0;
-			negState = 0;
-      $("#calcDisp").html("4");
-    } else {
-      $("#calcDisp").append("4");
-      operationState = 0;
-			negState = 0;
-    }
-  });
-
-  //When user clicks 5, either overwrites or appends
-  $("#5").on('click',function(){
-    if (dataState === 0) {
-			dataState = 1;
-      operationState = 0;
-			negState = 0;
-      $("#calcDisp").html("5");
-    } else {
-      $("#calcDisp").append("5");
-      operationState = 0;
-			negState = 0;
-    }
-  });
-
-  //When user clicks 6, either overwrites or appends
-  $("#6").on('click',function(){
-    if (dataState === 0) {
-			dataState = 1;
-      operationState = 0;
-			negState = 0;
-      $("#calcDisp").html("6");
-    } else {
-      $("#calcDisp").append("6");
-      operationState = 0;
-			negState = 0;
-    }
-  });
-
-  //When user clicks 7, either overwrites or appends
-  $("#7").on('click',function(){
-    if (dataState === 0) {
-			dataState = 1;
-      operationState = 0;
-			negState = 0;
-      $("#calcDisp").html("7");
-    } else {
-      $("#calcDisp").append("7");
-      operationState = 0;
-			negState = 0;
-    }
-  });
-
-  //When user clicks 8, either overwrites or appends
-  $("#8").on('click',function(){
-    if (dataState === 0) {
-			dataState = 1;
-      operationState = 0;
-			negState = 0;
-      $("#calcDisp").html("8");
-    } else {
-      $("#calcDisp").append("8");
-      operationState = 0;
-			negState = 0;
-    }
-  });
-
-  //When user clicks 9, either overwrites or appends
-  $("#9").on('click',function(){
-    if (dataState === 0) {
-			dataState = 1;
-      operationState = 0;
-			negState = 0;
-      $("#calcDisp").html("9");
-    } else {
-      $("#calcDisp").append("9");
-      operationState = 0;
-			negState = 0;
-    }
+		operationState = 0;
+		negState = 0;
   });
 
   /*The following functions only run if a valid number precedes it. This even works for incomplete decimals, such as "9.".*/
