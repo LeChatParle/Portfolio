@@ -3,9 +3,9 @@ $(document).ready(function() {
 	"use strict";
 
   //Sets attr to zero on load
-	var dataState = 0;
-	var operationState = 0;
-	var negState = 0;
+	var dataState = 0; //dataState is if there is numbers that can be acted on
+	var operationState = 0; //If there is an operation that can't be acted on
+	var negState = 0; //if there is a neg or minus, as it can be an op or neg
 
   //Resets display and attr on "clear"
   $("#clear").on('click',function(){
@@ -25,17 +25,17 @@ $(document).ready(function() {
   });
 
 	//$(this.id).text()
-  //When user clicks 0, either overwrites or appends
+  //When user clicks a number, either overwrites or appends
   $("#0, #1, #2, #3, #4, #5, #6, #7, #8, #9").on('click',function(){
 		var thisId = this.id;
     if (dataState === 0) {
-			dataState = 1;
+			dataState = 1; //Sets to 1 to indicate that an operation can now take place
       $("#calcDisp").html( $("#" + thisId).text() );
     } else {
       $("#calcDisp").append( $("#" + thisId).text() );
     }
-		operationState = 0;
-		negState = 0;
+		operationState = 0; //No operation is being done, so numbers can be appended
+		negState = 0; //No neg sign, so one can be added to indicate subtraction
   });
 
   /*The following functions only run if a valid number precedes it. This even works for incomplete decimals, such as "9.".*/
