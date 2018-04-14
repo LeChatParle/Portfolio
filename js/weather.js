@@ -49,7 +49,7 @@ function getWeather() {
 	
 	//Uses ajax call to get JSON data from weather app based on geolocation
   $.ajax({
-    url: "https://api.openweathermap.org/data/2.5/weather?lat=" + currentLatitude + "&lon=" + currentLongitude +"&APPID=fef70b002c9741456fbf8d4466780a9d", 
+    url: `https://api.openweathermap.org/data/2.5/weather?lat=${currentLatitude}&lon=${currentLongitude}&APPID=fef70b002c9741456fbf8d4466780a9d`, 
 
     success: function(data) {
 			console.log(data);

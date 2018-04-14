@@ -38,26 +38,32 @@ function getUser() {
     
         success: function(twitchData) { 
 					//This is where it writes the elements to the page
-          $("#twitchDiv").append("<a href='https://www.twitch.tv/ogamingsc2' class='text-light' 'target='blank'><div><h3 id='title'>" + t1dn + "</h3><p id='ogsc2'></p></div></a>");
-					$("#twitchDiv").append("<a href='https://www.twitch.tv/ogaminginter' class='text-light' 'target='blank'><div><h3>" + t2dn + "</h3><p id='ogi'></p></div></a>");
-          $("#twitchDiv").append("<a href='https://www.twitch.tv/esl_sc2' class='text-light' target='blank'><div><h3>" + t3dn + "</h3><p id='esl'></p></div></a>");
-					$("#twitchDiv").append("<a href='https://www.twitch.tv/x5_PiG' class='text-light' target='blank'><div><h3>" + t4dn + "</h3><p id='pig'></p></div></a>");
+          $("#twitchDiv").append(`<a href='https://www.twitch.tv/ogamingsc2' class='text-light' 'target='blank'><div><h3 id='title'>${t1dn}</h3><p id='ogsc2'></p></div></a>`);
+					$("#twitchDiv").append(`<a href='https://www.twitch.tv/ogaminginter' class='text-light' 'target='blank'><div><h3>${t2dn}</h3><p id='ogi'></p></div></a>`);
+          $("#twitchDiv").append(`<a href='https://www.twitch.tv/esl_sc2' class='text-light' target='blank'><div><h3>${t3dn}</h3><p id='esl'></p></div></a>`);
+					$("#twitchDiv").append(`<a href='https://www.twitch.tv/x5_PiG' class='text-light' target='blank'><div><h3>${t4dn}</h3><p id='pig'></p></div></a>`);
 
 					
           for (var i = 0; i <= twitchData.data.length; i++) {
-            if ((twitchData.data[i].type === "live") && twitchData.data[i].user_id === ogsc2) {
-              //If live, then write their live data to the page
-              $("#ogsc2").html("Live right now: " + twitchData.data[i].title);             
-            } else if ((twitchData.data[i].type === "live") && twitchData.data[i].user_id === ogi) {
-              //If live, then write their live data to the page      
-              $("#ogi").html("Live right now: " + twitchData.data[i].title);  
-            } else if ((twitchData.data[i].type === "live") && twitchData.data[i].user_id === esl) {
-              //If live, then write their live data to the page      
-              $("#esl").html("Live right now: " + twitchData.data[i].title);  
-            } else if ((twitchData.data[i].type === "live") && twitchData.data[i].user_id === pig) {
-              //If live, then write their live data to the page      
-              $("#pig").html("Live right now: " + twitchData.data[i].title);  
-            }  
+						//If live, then write the stream title and "live" to the page
+						if (twitchData.data[i].type === "live") {
+							switch (twitchData.data[i].user_id) {
+								case ogsc2:
+									$("#ogsc2").html(`Live right now: ${twitchData.data[i].title}`);
+									break;
+								case ogi:
+									$("#ogi").html(`Live right now: ${twitchData.data[i].title}`);  
+									break;
+								case esl:
+									$("#esl").html(`Live right now: ${twitchData.data[i].title}`);
+									break;
+								case pig:
+									$("#pig").html(`Live right now: ${twitchData.data[i].title}`);
+									break;
+								default:
+									break;
+							}
+						}  
           }
         }    
       });

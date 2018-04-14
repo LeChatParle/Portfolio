@@ -20,13 +20,13 @@ function getDataFromWiki(page) {
 	"use strict";
 	
   $.ajax( {
-    url: "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent(page) + "&prop=info&inprop=url&utf8=&format=json",
+    url: `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(page)}&prop=info&inprop=url&utf8=&format=json`,
     dataType: 'jsonp',
     headers: { 'Api-User-Agent': 'WikiApp/0.1 (chatparle@me.com)' },
 		
     success: function(data) {
 			for (var i = 0; i < 3; i++) {
-				$("#searchResults").append("<a href='http://en.wikipedia.org/?curid=" + data.query.search[i].pageid + "' target='blank'><div class='text-light' id='jqueryDiv" + i + "'></div></a>");
+				$("#searchResults").append(`<a href='http://en.wikipedia.org/?curid=${data.query.search[i].pageid}' target='blank'><div class='text-light' id='jqueryDiv${i}'></div></a>`);
 				$("#jqueryDiv" + i + "").html(data.query.search[i].title);
 				$("#jqueryDiv" + i + "").append("<p class='text-light' id='jqueryBody" + i + "'></p>");
 				$("#jqueryBody" + i + "").html(data.query.search[i].snippet);
