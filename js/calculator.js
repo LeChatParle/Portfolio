@@ -5,12 +5,14 @@ $(document).ready(function() {
   //Sets attr to zero on load
 	var dataState = 0;
 	var operationState = 0;
+	var negState = 0;
 
   //Resets display and attr on "clear"
   $("#clear").on('click',function(){
     $("#calcDisp").html("0");
     dataState = 0;
     operationState = 0;
+		negState = 0;
   });
 
 	//Resets display, history and attr on "clear all"
@@ -19,6 +21,7 @@ $(document).ready(function() {
 		$("#calcResults").html("0");
     dataState = 0;
     operationState = 0;
+		negState = 0;
   });
 
   //When user clicks 0, either overwrites or appends
@@ -26,10 +29,12 @@ $(document).ready(function() {
     if (dataState === 0) {
 			dataState = 1;
 			operationState = 0;
+			negState = 0;
       $("#calcDisp").html("0");
     } else {
       $("#calcDisp").append("0");
       operationState = 0;
+			negState = 0;
     }
   });
 
@@ -38,10 +43,12 @@ $(document).ready(function() {
     if (dataState === 0) {
 			dataState = 1;
 			operationState = 0;
+			negState = 0;
       $("#calcDisp").html("1");
     } else {
       $("#calcDisp").append("1");
       operationState = 0;
+			negState = 0;
     }
   });
 
@@ -50,10 +57,12 @@ $(document).ready(function() {
     if (dataState === 0) {
 			dataState = 1;
       operationState = 0;
+			negState = 0;
       $("#calcDisp").html("2");
     } else {
       $("#calcDisp").append("2");
       operationState = 0;
+			negState = 0;
     }
   });
 
@@ -62,10 +71,12 @@ $(document).ready(function() {
     if (dataState === 0) {
 			dataState = 1;
       operationState = 0;
+			negState = 0;
       $("#calcDisp").html("3");
     } else {
       $("#calcDisp").append("3");
       operationState = 0;
+			negState = 0;
     }
   });
 
@@ -74,10 +85,12 @@ $(document).ready(function() {
     if (dataState === 0) {
 			dataState = 1;
       operationState = 0;
+			negState = 0;
       $("#calcDisp").html("4");
     } else {
       $("#calcDisp").append("4");
       operationState = 0;
+			negState = 0;
     }
   });
 
@@ -86,10 +99,12 @@ $(document).ready(function() {
     if (dataState === 0) {
 			dataState = 1;
       operationState = 0;
+			negState = 0;
       $("#calcDisp").html("5");
     } else {
       $("#calcDisp").append("5");
       operationState = 0;
+			negState = 0;
     }
   });
 
@@ -98,10 +113,12 @@ $(document).ready(function() {
     if (dataState === 0) {
 			dataState = 1;
       operationState = 0;
+			negState = 0;
       $("#calcDisp").html("6");
     } else {
       $("#calcDisp").append("6");
       operationState = 0;
+			negState = 0;
     }
   });
 
@@ -110,10 +127,12 @@ $(document).ready(function() {
     if (dataState === 0) {
 			dataState = 1;
       operationState = 0;
+			negState = 0;
       $("#calcDisp").html("7");
     } else {
       $("#calcDisp").append("7");
       operationState = 0;
+			negState = 0;
     }
   });
 
@@ -122,10 +141,12 @@ $(document).ready(function() {
     if (dataState === 0) {
 			dataState = 1;
       operationState = 0;
+			negState = 0;
       $("#calcDisp").html("8");
     } else {
       $("#calcDisp").append("8");
       operationState = 0;
+			negState = 0;
     }
   });
 
@@ -134,10 +155,12 @@ $(document).ready(function() {
     if (dataState === 0) {
 			dataState = 1;
       operationState = 0;
+			negState = 0;
       $("#calcDisp").html("9");
     } else {
       $("#calcDisp").append("9");
       operationState = 0;
+			negState = 0;
     }
   });
 
@@ -177,14 +200,15 @@ $(document).ready(function() {
 
   //When user clicks -, appends
   $("#minus").on('click',function(){
-    if (dataState === 0) {
-      $("#calcDisp").html("-");
+		if (negState === 0) {
+			if (dataState === 0) {
+	      $("#calcDisp").html("-");
+	    } else {
+				$("#calcDisp").append("-");
+			}
 			dataState = 1;
-      operationState = 1;
-    } else {
-			$("#calcDisp").append("-");
-			dataState = 1;
-      operationState = 1;
+			operationState = 1;
+			negState = 1;
 		}
   });
 
