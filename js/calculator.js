@@ -41,26 +41,11 @@ $(document).ready(function() {
   /*The following functions only run if a valid number precedes it. This even works for incomplete decimals, such as "9.".*/
 
   //When user clicks *, appends
-  $("#X").on('click',function(){
+  $("#X, #div, #plus").on('click',function(){
+		var thisId = this.id;
     if (dataState !== 0 && operationState === 0) {
-      $("#calcDisp").append("*");
+      $("#calcDisp").append( $("#" + thisId).text() );
 			operationState = 1;
-    }
-  });
-
-  //When user clicks /, appends
-  $("#div").on('click',function(){
-    if (dataState !== 0 && operationState === 0) {
-      $("#calcDisp").append("/");
-      operationState = 1;
-    }
-  });
-
-  //When user clicks +, appends
-  $("#plus").on('click',function(){
-    if (dataState !== 0 && operationState === 0) {
-      $("#calcDisp").append("+");
-      operationState = 1;
     }
   });
 
