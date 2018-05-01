@@ -31,6 +31,9 @@ nav {
 
 .bgColorNav {
 	background-color: #000000;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-color: #FF0000;
 }
 
 #logo {
