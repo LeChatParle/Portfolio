@@ -2,33 +2,20 @@
 <html lang="en">
 	<head>
     <meta charset="UTF-8">
-		<meta name="author" content="Jeremy Edwards" > 
-		<meta name="description" content="A portfolio and showcase of Jeremy Edwards's web development work." > 
-		<meta name="keywords" content="website, javasrcipt, employee, work, jobs, portfolio, development" > 
+		<meta name="author" content="Jeremy Edwards" >
+		<meta name="description" content="A portfolio and showcase of Jeremy Edwards's web development work." >
+		<meta name="keywords" content="website, javasrcipt, employee, work, jobs, portfolio, development" >
     <title>Jeremy Edwards</title>
-		<!-- JS Files first; CSS files have JS file dependencies --> 
-		<script src="./js/jquery-3.3.1.min.js"></script>
-		<script src="./js/bootstrap.min.js"></script>
-		<script src="./js/main.js"></script>
-		<script src="./js/jquery.fullpage.min.js"></script>
-		<script src="./js/fontawesome-all.min.js"></script>
-		<!-- CSS Files -->
-		<link rel="stylesheet" href="./cs/bootstrap.min.css">
-		<link rel="stylesheet" href="./cs/main.css">
-		<link rel="stylesheet" href="./cs/jquery.fullpage.min.css">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117030540-1"></script>
-		<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-117030540-1');</script>
   	</head>
 	<body>
-		
+
 		<!--Navbar does not collapse on smaller screens. That should be the next step, i.e. use a hamburger menu -->
 		<nav class="navbar navbar-expand navbar-dark fixed-top bgColorNav overflow-hidden position-fixed m-0">
 			<div class="dropdown show">
 				<a href="#landing" class="nav-link pt-1 pl-0" id="logo">EBJ</a>
 			</div>
 		</nav>
-		
+
 		<div id="fullpage">
 			<!-- Column tags on the jumbotron divs causes image overflow issues unless you get rid of margins; Removed margins on top and bottom to ensure panels touch. Removed border radius to have straight edges-->
 			<div class="pr-5 section" data-anchor="landing" id="mainDiv">
@@ -52,7 +39,7 @@
 				</div>
 			</div>
 
-			<!--App section to put projects as I create them-->	
+			<!--App section to put projects as I create them-->
 			<div class="section text-center pr-3" id="apps" data-anchor="app">
 				<div class="row">
 					<div class="col-4 pb-5"><a href="./as/quoteGenerator.html" title="Quote Generator"><i class="fas fa-quote-left"></i></a></div>
@@ -74,7 +61,7 @@
 				</div>
 			</div>
 
-			<!--This is the photography section to show off some of my skills, esp. vis-à-vis Photoshop-->	
+			<!--This is the photography section to show off some of my skills, esp. vis-à-vis Photoshop-->
 			<div class="mb-0 section" id="photography" data-anchor="photos">
 				<div class="col p-0 m-0 text-center slide"><img src="./im/Bicycle.jpg" class="img-fluid p-0 m-0 myPhotos" alt="A picture of a bicycle leaning against a wooden fence by a swamp at dawn"></div>
 				<div class="col p-0 m-0 text-center slide"><img src="./im/Birdhouse.jpg" class="img-fluid p-0 m-0 myPhotos" alt="A picture of a birdhouse in a swamp"></div>
@@ -90,6 +77,20 @@
 				<div class="col p-0 m-0 text-center slide"><img src="./im/An Artist.jpg" class="img-fluid p-0 m-0 myPhotos" alt="A picture of a woman in dirty painting clothes with green eyes and perfect skin"></div>
 			</div>
 		</div>
-		
+
+
+		<!-- JS Files first; CSS files have JS file dependencies -->
+		<script src="./js/jquery-3.3.1.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/main.js"></script>
+		<script src="./js/jquery.fullpage.min.js"></script>
+		<script src="./js/fontawesome-all.min.js"></script>
+		<!-- CSS Files -->
+		<link rel="stylesheet" href="./cs/bootstrap.min.css">
+		<link rel="stylesheet" href="./cs/main.css">
+		<link rel="stylesheet" href="./cs/jquery.fullpage.min.css">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117030540-1"></script>
+		<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-117030540-1');</script>
   </body>
 </html>
