@@ -79,6 +79,24 @@ function getWeather() {
 					case "Mist":
 						$("#weatherPic").html("<i class='wi wi-day-fog' id='weatherIcon'></i>");
 						break;
+					case "Thunderstorm":
+						$("#weatherPic").html("<i class='wi wi-day-thunderstorm' id='weatherIcon'></i>");
+						break;
+					case "Drizzle":
+						$("#weatherPic").html("<i class='wi wi-day-sprinkle' id='weatherIcon'></i>");
+						break;
+					case "Snow":
+						$("#weatherPic").html("<i class='wi wi-day-snow' id='weatherIcon'></i>");
+						break;
+					case "Fog":
+						$("#weatherPic").html("<i class='wi wi-day-fog' id='weatherIcon'></i>");
+						break;
+					case "Haze":
+						$("#weatherPic").html("<i class='wi wi-day-haze' id='weatherIcon'></i>");
+						break;
+					case "Smoke":
+						$("#weatherPic").html("<i class='wi wi-smoke' id='weatherIcon'></i>");
+						break;
 					default:
 						$("#weatherPic").html("<i class='wi wi-alien' id='weatherIcon'></i>");
 						console.log("Unknown daytime weather phenomenon");
@@ -97,6 +115,24 @@ function getWeather() {
 						break;
 					case "Mist":
 						$("#weatherPic").html("<i class='wi wi-night-fog' id='weatherIcon'></i>");
+						break;
+					case "Thunderstorm":
+						$("#weatherPic").html("<i class='wi wi-night-alt-thunderstorm' id='weatherIcon'></i>");
+						break;
+					case "Drizzle":
+						$("#weatherPic").html("<i class='wi wi-night-alt-sprinkle' id='weatherIcon'></i>");
+						break;
+					case "Snow":
+						$("#weatherPic").html("<i class='wi wi-night-alt-snow' id='weatherIcon'></i>");
+						break;
+					case "Fog":
+						$("#weatherPic").html("<i class='wi wi-night-fog' id='weatherIcon'></i>");
+						break;
+					case "Haze":
+						$("#weatherPic").html("<i class='wi wi-night-fog' id='weatherIcon'></i>");
+						break;
+					case "Smoke":
+						$("#weatherPic").html("<i class='wi wi-smoke' id='weatherIcon'></i>");
 						break;
 					default:
 						$("#weatherPic").html("<i class='wi wi-alien' id='weatherIcon'></i>");
