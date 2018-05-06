@@ -7,7 +7,7 @@ function getGeoData() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
     	currentLatitude = position.coords.latitude;
-      currentLongitude = position.coords.longitude;     
+      currentLongitude = position.coords.longitude;
       getWeather();
     });
   }
@@ -19,12 +19,12 @@ function setTime() {
 	var date = new Date();
 	var y = date.getFullYear();
 	var M = date.getMonth();
-	var d = date.getDate(); 
+	var d = date.getDate();
 	var h = date.getHours();
 	var m = date.getMinutes();
 	var fullDate;
 	var time24f;
-	
+
 	if (h < 10) { h = "0" + h;}
 	if (M < 10) { M = "0" + M;}
 	if (d < 10) { d = "0" + d;}
@@ -32,7 +32,7 @@ function setTime() {
 
 	time24f = h + ":" + m;
 	fullDate = y + "-" + M + "-" + d;
-	
+
 	$("#time").html(time24f);
 }
 
@@ -46,10 +46,10 @@ function getWeather() {
 	var date = new Date();
 	var h = date.getHours();
 	var dataClickState = 0;
-	
+
 	//Uses ajax call to get JSON data from weather app based on geolocation
   $.ajax({
-    url: `https://api.openweathermap.org/data/2.5/weather?lat=${currentLatitude}&lon=${currentLongitude}&APPID=fef70b002c9741456fbf8d4466780a9d`, 
+    url: `https://api.openweathermap.org/data/2.5/weather?lat=${currentLatitude}&lon=${currentLongitude}&APPID=fef70b002c9741456fbf8d4466780a9d`,
 
     success: function(data) {
 			console.log(data);
@@ -58,12 +58,12 @@ function getWeather() {
 			temperatureK = Math.round(data.main.temp);
       temperatureC = Math.round(data.main.temp - 273.15); //API returns temp in Kelvin
       temperatureF = Math.round(temperatureC * 9 / 5 + 32);
-			
+
 			//Writes weather data to page
       $("#weatherDesc").html(weatherDesc);
       $("#city").html(city);
       $(".temperatureC").html(temperatureC + "ºC");
-			
+
 			//Sets the weather icon based on time & conditions; As I learn new conditions, I write the code to handle them
 			if (h < 19 && h > 6) {
 				switch (weatherDesc) {
@@ -76,7 +76,11 @@ function getWeather() {
 					case "Rain":
 						$("#weatherPic").html("<i class='wi wi-day-rain' id='weatherIcon'></i>");
 						break;
+					case "Mist":
+						$("#weatherPic").html("<i class='wi wi-day-fog' id='weatherIcon'></i>");
+						break;
 					default:
+						$("#weatherPic").html("<i class='wi wi-alien' id='weatherIcon'></i>");
 						console.log("Unknown daytime weather phenomenon");
 						break;
 				}
@@ -91,12 +95,16 @@ function getWeather() {
 					case "Rain":
 						$("#weatherPic").html("<i class='wi wi-night-showers' id='weatherIcon'></i>");
 						break;
+					case "Mist":
+						$("#weatherPic").html("<i class='wi wi-night-fog' id='weatherIcon'></i>");
+						break;
 					default:
+						$("#weatherPic").html("<i class='wi wi-alien' id='weatherIcon'></i>");
 						console.log("Unknown nighttime weather phenomenon");
 						break;
-				}		
+				}
 			}
-					
+
 			//Allows user to convert to Kelvin or the devil's measurement
       $("#temperatureC").on('click',function(){
 				switch (dataClickState) {
@@ -104,7 +112,7 @@ function getWeather() {
 						dataClickState++;
           	$("#temperatureC").html(temperatureK + "K");
 						break;
-					case 1: 
+					case 1:
 						dataClickState++;
           	$("#temperatureC").html(temperatureF + "ºF");
 						break;
@@ -113,7 +121,7 @@ function getWeather() {
           	$("#temperatureC").html(temperatureC + "ºC");
 				}
       });
-      
+
     }
   });
 }

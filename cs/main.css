@@ -113,7 +113,7 @@ nav {
 	color: #FFFFFF;
 }
 
-.fa-sun, .fa-wikipedia-w, .fa-twitch, .fa-calculator, .fa-clock, .fa-github, .fa-linkedin-in, .fa-file-pdf, .fa-gamepad {
+.fa-sun, .fa-wikipedia-w, .fa-twitch, .fa-calculator, .fa-clock, .fa-github, .fa-linkedin-in, .fa-file-pdf, .fa-gamepad, .fa-paw {
 	font-size: 8vw;
 	color: #FFFFFF;
 }
@@ -122,7 +122,7 @@ nav {
 	color: #FF0000;
 }
 
-.fa-sun :hover, .fa-wikipedia-w :hover, .fa-twitch :hover, .fa-calculator :hover, .fa-clock :hover, .fa-github :hover, .fa-linkedin-in :hover, .fa-file-pdf :hover, .fa-gamepad :hover {
+.fa-sun :hover, .fa-wikipedia-w :hover, .fa-twitch :hover, .fa-calculator :hover, .fa-clock :hover, .fa-github :hover, .fa-linkedin-in :hover, .fa-file-pdf :hover, .fa-gamepad :hover, .fa-paw :hover {
 	color: #FF0000;
 }
 
@@ -182,7 +182,7 @@ nav {
 }
 
 #weatherIcon {
-	color: #000000;	
+	color: #000000;
 	font-size: 5vw;
 }
 
@@ -273,7 +273,7 @@ nav {
 
 .stopBorders button {
 	border-radius: 0px !important;
-} 
+}
 
 .stopBorders {
 	background: #FF9000;
@@ -346,5 +346,5 @@ nav {
 
 #blue:focus {background-color: #0067FF;}
 #green:focus {background-color: #03FF00;}
-#yellow:focus {background-color: #E5FF00;} 
+#yellow:focus {background-color: #E5FF00;}
 #red:focus {background-color: #FF0000;}

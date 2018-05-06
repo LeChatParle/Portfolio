@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jeremy Edwards" >
+    <title>Pokédex</title>
+  </head>
+<body>
+	<nav class="navbar navbar-expand navbar-dark fixed-top bgColorNav overflow-hidden position-fixed m-0">
+		<div class="dropdown show">
+			<a href="../index.html#app" class="nav-link pt-1 pl-0" id="logo">EBJ</a>
+		</div>
+	</nav>
+
+  <div class="container-fluid mt-3 p-5 row">
+		<div class="col-12 mt-5 text-center">
+			<h2 class="text-light">EBJ's Pokédex</h2>
+		</div>
+
+		<div class="mainText col-6 mt-5">
+			<input type="number" id="pokemonID" placeholder="Pokemon ID" class="form-control">
+			<button id="submitID" class="btn btn-primary mt-2" onClick="retrieve()">Submit</button>
+		</div>
+
+		<div class="col-6 mt-5">
+			<div id="pokeDiv row">
+				<div class="col-12 text-center text-light" id="pokeText"></div>
+				<div class="col-12 text-center" id="pokePic"></div>
+			</div>
+		</div>
+	</div>
+
+  <!-- JS Files -->
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/jquery.fullpage.min.js"></script>
+  <script defer src="../js/fontawesome-all.min.js"></script>
+  <script src="../js/pokemon.js"></script>
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="../cs/bootstrap.min.css">
+  <link rel="stylesheet" href="../cs/main.css">
+  <link rel="stylesheet" href="../cs/jquery.fullpage.min.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117030540-1"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-117030540-1');</script>
+</body>
+</html>
