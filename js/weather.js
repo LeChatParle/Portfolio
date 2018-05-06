@@ -62,7 +62,7 @@ function getWeather() {
 			//Writes weather data to page
       $("#weatherDesc").html(weatherDesc);
       $("#city").html(city);
-      $(".temperatureC").html(temperatureC + "ºC");
+      $(".temperatureC").html(`${temperatureC}ºC`);
 
 			//Sets the weather icon based on time & conditions; As I learn new conditions, I write the code to handle them
 			if (h < 19 && h > 6) {
@@ -146,15 +146,15 @@ function getWeather() {
 				switch (dataClickState) {
 					case 0:
 						dataClickState++;
-          	$("#temperatureC").html(temperatureK + "K");
+          	$("#temperatureC").html(`${temperatureK}K`);
 						break;
 					case 1:
 						dataClickState++;
-          	$("#temperatureC").html(temperatureF + "ºF");
+          	$("#temperatureC").html(`${temperatureF}ºF`);
 						break;
 					case 2:
 						dataClickState = 0;
-          	$("#temperatureC").html(temperatureC + "ºC");
+          	$("#temperatureC").html(`${temperatureC}ºC`);
 				}
       });
 

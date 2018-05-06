@@ -16,7 +16,7 @@ $(document).ready(function () {
   var audioYellow = new Audio(yellowSound);
 	var redSound = '../as/F.mp3';
   var audioRed = new Audio(redSound);
-	
+
 	$('#restart').hide();
 	$('#startGame').show();
 
@@ -77,7 +77,7 @@ $(document).ready(function () {
 	//Sets level one higher and starts new level
 	function nextLevel() {
 		step++;
-		$('#level').text('Level: ' + step);
+		$('#level').text(`Level: ${step}`);
 		playNoteSeq();
 		playerSounds = [];
 	}
@@ -85,7 +85,7 @@ $(document).ready(function () {
 	//On failure, game resets after 3 seconds
 	function failedLevel() {
 		$('#level').text("Fail! Try again!");
-		setTimeout(function() { 
+		setTimeout(function() {
 		reset();
 		$('#startGame').show();
 		$('#restart').hide();
@@ -117,7 +117,7 @@ $(document).ready(function () {
 		$('#blue, #green, #yellow, #red').css("pointer-events", "none");
 		timeout = setTimeout(function() {
 			level = 0;
-			seq = setInterval(playInterval, waitInterval); 
+			seq = setInterval(playInterval, waitInterval);
 		}, 1000);
 	}
 
@@ -128,12 +128,12 @@ $(document).ready(function () {
 		if (step <= level) {
 			// make notes clickable
 			$('#blue, #green, #yellow, #red').css("pointer-events", "auto");
-			// stop setInterval 
+			// stop setInterval
 			clearInterval(seq);
 		}
 		level++;
 	}
- 
+
 	//Creates a random array of non-repeating numbers.
 	function random(min, max, length) {
 		var numbers = [];
