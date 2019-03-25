@@ -1,15 +1,21 @@
 # Portfolio
 A repo for my public, personal website
 
-This site is currently hosted on a free server, so if there are any issues, please note I plan on upgrading to a paid site very soon.
+This site is currently hosted on a free server, so if there are any issues, please note I plan on upgrading to a paid site.
 
-## Known Bugs
+## Known Bugs & Desired Feature Improvements
 
 ### Wikipedia App
 1. Hitting enter after entering a search parameter clears the field instead of searching.
 
 ### Quotes
 1. API no longer works correctly.
+
+### Photos
+1. Add new photos.
+
+### Design
+1. Come up with fresh new design.
 
 ## Fixed Bugs & Completed Feature Improvements
 
