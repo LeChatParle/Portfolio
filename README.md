@@ -8,6 +8,9 @@ This site is currently hosted on a free server, so if there are any issues, plea
 ### Wikipedia App
 1. Hitting enter after entering a search parameter clears the field instead of searching.
 
+### Quotes
+1. API no longer works correctly.
+
 ## Fixed Bugs & Completed Feature Improvements
 
 ### Calculator App
