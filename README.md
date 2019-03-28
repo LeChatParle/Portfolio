@@ -18,7 +18,7 @@ This site is currently hosted on a free server, so if there are any issues, plea
 1. Come up with fresh new design.
 
 ### Calculator
-1. The calculator should be able to perform calculations on the secondary display. 5+5 = 10. 10 is now on the secondary display, but if you type -3, and then hit enter, the secondary display will be updated too -3, not 7. 
+1. The calculator should be able to perform calculations on the secondary display. 5+5 = 10. 10 is now on the secondary display, but if you type -3, and then hit enter, the secondary display will be updated to -3, not 7. 
 
 ## Fixed Bugs & Completed Feature Improvements
 
